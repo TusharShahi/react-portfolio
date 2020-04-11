@@ -12,24 +12,18 @@ class ModeSwitchToggler extends React.Component {
         
         this.state = {
             mode : this.props.mode,
-            //eyeCode : '-',
-           // mou
         }
     }
 
     slide(e){
         e.preventDefault();
         if(this.state.mode == 'light'){
-            this.setState({
-                mode : 'dark'
-            });
-            return this.props.changeMode('dark');
+            this.state.mode = 'dark';
+            return this.props.changeMode('light');
         }
         else if(this.state.mode == 'dark')
         {
-            this.setState({
-                mode : 'light'
-            });        
+            this.state.mode = 'light';
             return this.props.changeMode('dark');
         }
 
@@ -44,7 +38,8 @@ class ModeSwitchToggler extends React.Component {
            else{
             positionRight = false;
            }
-           return(<div className='ModeSwitchToggler'>
+           return(
+           <div className='ModeSwitchToggler'>
                <div onClick={this.slide}>
                     <div id='face'
                                 className={ cx({
