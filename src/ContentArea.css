@@ -1,0 +1,23 @@
+.ContentArea{
+    width: 75%;
+    margin: 5% 0 0 25%;
+
+    text-align: left;
+    padding: 2%;
+    /* TODO : remove maybe*/
+
+}
+
+.ContentArea > div{
+    padding: 5%;
+    font-family: 'Rubik';
+    color : var(--paraText);    
+}
+
+.ContentArea > div > h1 {
+    margin: 3% 0;
+    text-transform: uppercase;
+    color: var(--headerText);
+    border-bottom: 0.1em dashed #86c232;
+
+}

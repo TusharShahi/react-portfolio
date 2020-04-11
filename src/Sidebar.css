@@ -1,0 +1,49 @@
+.SideBar{
+
+    width: 25%;
+    float: left;
+    padding: 20px;
+    position: fixed;
+    bottom : 0px; 
+    font-family: 'Rubik';
+    /* display: none; */
+    /*TODO : top: 70px; */
+}
+
+#socialMediaBox{
+    display: flex;
+    width: 50%;
+}
+.SocialMediaLink{
+width: 30%;
+}
+
+.MediaIconBox > img{
+    width: 100%;
+}
+
+#displayPhotoArea{
+    width: 60%;
+    display: flexbox;
+}
+
+#displayPhotoArea img{
+    width: 100%;
+}
+
+#welcomeArea h2{
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#nameSpan{
+    color : #86c232;
+}
+
+#emailAndPhoneBox{
+    display: flex;
+}
+
+#emailAndPhoneBox p{
+    font-size: 60%;
+}

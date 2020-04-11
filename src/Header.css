@@ -1,0 +1,23 @@
+.Header{
+    position: absolute;
+    width: 100%;
+    top: 20px;
+}
+
+.Navbar{
+    display: flex;
+    width: 30%;
+    float: right;
+    padding: 0 5%;
+    }
+    
+.Navlink{
+        margin: 20px 10%;
+        font-family: 'Rubik';
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+.clicked {
+        color : #c5c6c8;
+        /*text-decoration: underline dotted #EA215A;*/
+    }

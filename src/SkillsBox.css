@@ -1,0 +1,17 @@
+.SkillsBox img{
+    
+}
+
+.SkillsBox ul{
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+}
+.SkillsBox li{
+    width: 4%;
+    margin : 2% 2% 2% 0%;
+}
+
+.SkillsBox img{
+    width: 100%;
+}
