@@ -8,9 +8,21 @@ class Myself extends React.Component {
         this.state = {};
     }
 
+    loadDesigns(){
+
+        
+
+    }
+
     render(){
            return(<div className='DesignsBox'>
                <h3>Here's some stuff I designed:</h3>
+               <div className='designGallery'>
+
+
+
+
+               </div>
 
             </div>);
         }
