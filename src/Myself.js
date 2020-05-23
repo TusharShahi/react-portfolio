@@ -1,5 +1,13 @@
 import React from 'react';
-import ContentHeader from './ContentHeader';
+import AbilitiesBox from './AbilitiesBox';
+import DesignsBox from './DesignsBox';
+
+
+
+import {myDescription, myFreeTime, myBrag, myHobbies} from './constants';
+
+import './Myself.css';
+
 
 class Myself extends React.Component {
 
@@ -12,10 +20,24 @@ class Myself extends React.Component {
     render(){
 
 
-           return(<div>
+           return(<div className='Myself'>
                 <h1>Myself</h1> 
+                <div id='description'>
+                <h3>{myDescription}</h3>
+                </div>                
+                <div id='javascriptBrag'>
+                <h3>{myBrag}</h3>
+                </div>
+                <div id='hobbies'>
+                <h3>{myHobbies}</h3>
+                </div>
+                <div id='freeTime'>
+                <h3>{myFreeTime}</h3>
+                </div>
 
-
+                
+                <AbilitiesBox></AbilitiesBox>
+                <DesignsBox></DesignsBox>
             </div>);
         }
         

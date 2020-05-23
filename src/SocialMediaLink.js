@@ -13,19 +13,14 @@ class SocialMediaLink extends React.Component {
   
         
         const altText = this.props.website + ' link';
-        const socialMediaType = this.state.socialMediaType;
-        let imageTagCode;
-        if(socialMediaType == 'instagram'){
-            imageTagCode = <img src={require(`${componentSocialMediaIconLink}`)} alt={altText}></img>
-        }
-        else if(socialMediaType == 'linkedin'){
-
-        }        
-
+        const socialMediaLink = this.props.link;
+        let imageLinkTagCode;
+        //if(socialMediaType == 'instagram'){
+          imageLinkTagCode = <a href={socialMediaLink}><img src={require(`${componentSocialMediaIconLink}`)} alt={altText}></img></a>
         return (
             <div className="SocialMediaLink">
                 <div className='MediaIconBox'>
-                  {imageTagCode}
+                  {imageLinkTagCode}
                 </div>
             </div>
           );

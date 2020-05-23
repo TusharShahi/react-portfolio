@@ -1,0 +1,34 @@
+.AbilitiesGroup{
+
+}
+.AbilitiesGroup > div{
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.AbilitiesGroup ul{
+    display : flex;
+}
+
+
+.AbilitiesGroup li{
+    width: 5%;
+    margin : 2% 5% 2% 0%;
+}
+
+.AbilitiesGroup img{
+    width: 100%;
+}
+
+.AbilitiesBox{
+
+margin: 5% 0 0 0;
+}
+
+.AbilitiesBox > h2{
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 2%;
+ /*   border-bottom: 0.1em dashed var(--paraText); */
+}

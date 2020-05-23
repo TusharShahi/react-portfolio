@@ -1,4 +1,7 @@
 .ContentArea{
+    
+    display: block;
+    opacity: 0;    
     width: 75%;
     margin: 5% 0 0 25%;
 
@@ -20,4 +23,13 @@
     color: var(--headerText);
     border-bottom: 0.1em dashed #86c232;
 
+}
+
+.showMainContent{
+
+    opacity: 1;    
+    transition: opacity 0.5s ease-in 0.25s;
+    -webkit-transition: opacity 0.5s ease-in 0.25s;
+    -moz-transition: opacity 0.5s ease-in 0.25s;
+      -o-transition: opacity 0.5s ease-in 0.25s;
 }

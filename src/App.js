@@ -29,7 +29,8 @@ class App extends React.Component {
     }
     
     this.state = {
-      contentAreaView : 'experience',
+      sideBarCompressed : false, 
+      contentAreaView : 'main',
       displayPictureLink : displayPictureLink,
       mode : preferredMode
     };
@@ -89,6 +90,15 @@ class App extends React.Component {
   }
 
   changeContent(newContent){
+    if(!this.state.sideBarCompressed){
+      //window.alert("I am called");
+      document.getElementById('mainPageSideBar').classList.add('sideBarCompressed');
+      document.getElementsByClassName('SideBarBox')[0].classList.add('sideBarBoxFullWidth');
+      document.getElementsByClassName('ContentArea')[0].classList.add('showMainContent');
+      //document.getElementsByClassName('ContentArea')[0].style.display = 'block';
+
+      
+    }
     if(this.state.contentAreaView != newContent){
       let newDisplayPictureLink = this.createNewDisplayPictureLink(newContent);
       this.setState({
@@ -99,7 +109,7 @@ class App extends React.Component {
   }
 
   changeDisplayPicture(newContent){
-
+    //window.alert("I am calle too");
     //if(this.state.contentAreaView != newContent)
     //{
       let newDisplayPictureLink = this.createNewDisplayPictureLink(newContent);
