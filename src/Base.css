@@ -32,6 +32,7 @@ body,html,div,h1,h2,h3,h4,h5, p,a, ul, li{
     text-decoration: none;
     box-sizing: border-box;
     list-style-type: none;   
+    font-size: 100%;
   }
 
 #root{
@@ -43,13 +44,11 @@ body,html,div,h1,h2,h3,h4,h5, p,a, ul, li{
 
 body {
     background-color:var(--background);
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* To remove vertical top margin */
    /* justify-content: center; */
-    font-size: calc(10px + 2vmin);
     color: white;
     font-family: 'Raleway';
 
@@ -62,8 +61,8 @@ a:hover{
 
 @media only screen and (min-width: 320px) and (max-width: 479px){  }
 
-@media only screen and (min-width: 480px) and (max-width: 767px){ }
+@media only screen and (min-width: 480px) and (max-width: 768px){ }
 
-@media only screen and (min-width: 768px) and (max-width: 991px){ }
+@media only screen and (min-width: 769px) and (max-width: 991px){ }
 
 @media only screen and (min-width: 992px){  }

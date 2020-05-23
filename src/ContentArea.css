@@ -35,10 +35,37 @@
 }
 
 
-@media only screen and (min-width: 320px) and (max-width: 479px){  }
+@media only screen and (min-width: 992px){
+    .SideBar{
+        font-size: 150%;
+    }
+    
 
-@media only screen and (min-width: 480px) and (max-width: 767px){ }
+}
 
-@media only screen and (min-width: 768px) and (max-width: 991px){ }
+@media only screen and (max-width: 991px){ 
+ 
+    
+}
 
-@media only screen and (min-width: 992px){  }
+
+@media only screen and (max-width: 768px){
+    .ContentArea{
+        display: none;
+        width: 100%;
+        margin: 5% auto;
+        text-align: center;
+        opacity: 1;
+    }
+
+    .displayMainContent{
+        display: block;
+    }    
+
+}
+    
+
+
+@media only screen and (max-width: 479px){ 
+
+}

@@ -2,17 +2,18 @@
     position: absolute;
     width: 100%;
     top: 20px;
+    font-size: 150%;
 }
 
 .Navbar{
     display: flex;
-    width: 30%;
+    width: 40%;
     float: right;
     padding: 0 5%;
     }
     
 .Navlink{
-        margin: 20px 10%;
+        margin: 5% 10%;
         font-family: 'Rubik';
         font-weight: 600;
         text-transform: uppercase;
@@ -23,10 +24,55 @@
     }
 
 
-@media only screen and (min-width: 320px) and (max-width: 479px){  }
 
-@media only screen and (min-width: 480px) and (max-width: 767px){ }
 
-@media only screen and (min-width: 768px) and (max-width: 991px){ }
+    @media only screen and (min-width: 992px){
 
-@media only screen and (min-width: 992px){  }
+    }
+
+    @media only screen and (max-width: 991px){ 
+        
+        .Navbar{
+            width: 50%;
+            }
+    
+    
+    }
+
+
+    @media only screen and (max-width: 768px){
+
+        .Header{
+            top: 80px;
+            font-size: 200%;
+        }
+        .Navbar{
+            width: 80%;
+            float: none;
+            text-align: center;
+            }
+        
+            .Navlink{
+                margin: 0 auto;
+            }
+        
+         }
+        
+
+
+@media only screen and (max-width: 479px){ 
+    .Header{
+        top: 50px;
+        font-size: 150%;
+    }
+
+    .Navbar{
+        width: 100%;
+        float: none;
+        text-align: center;
+        }
+    
+
+ }
+
+

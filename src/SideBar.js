@@ -1,6 +1,6 @@
 import React from 'react';
 import './Sidebar.css';
-import SocialMediaLink from './SocialMediaLink';
+import ContactArea from './ContactArea';
 
 class SideBar extends React.Component {
 
@@ -27,26 +27,7 @@ class SideBar extends React.Component {
             <h2>I code for a living.</h2>
             </div>
           </div>
-          <div id='contactArea'>
-
-
-              <div id='socialMediaBox'>
-                  <SocialMediaLink website='linkedin' link='https://www.instagram.com' shortHand='shahi_tushar'></SocialMediaLink>
-                  <SocialMediaLink website='instagram' link='https://www.instagram.com' shortHand='shahi_tushar'></SocialMediaLink>
-                  <SocialMediaLink website='github' link='https://www.instagram.com' shortHand='shahi_tushar'></SocialMediaLink>
-                  
-              </div>
-
-
-              <div id='emailAndPhoneBox'>
-                <p><a>shahi.tushar8@gmail.com</a></p>
-                <p>+91-8860129729</p>
-              </div>
-
-              <div id='copyrightBox'>
-                <p>	&copy; Tushar Shahi</p>
-              </div>
-          </div>
+          <ContactArea></ContactArea>
 
 
 

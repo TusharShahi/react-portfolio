@@ -10,7 +10,7 @@ import './App.css';
 import Header from './Header';
 import SideBar from './SideBar';
 import ContentArea from './ContentArea';
-
+import BottomContactArea from './BottomContactArea';
 
 class App extends React.Component {
   
@@ -21,21 +21,41 @@ class App extends React.Component {
     this.changeDisplayPicture = this.changeDisplayPicture.bind(this);
     this.changeMode = this.changeMode.bind(this);
     this.createNewDisplayPictureLink = this.createNewDisplayPictureLink.bind(this);
+    this.changeAccordingtToResize = this.changeAccordingtToResize.bind(this);
 
     let preferredMode = 'dark';
     if(localStorage.getItem('modeSwitch') !== null && localStorage.getItem('modeSwitch') === 'light'){
       preferredMode = 'light';
       this.changeColorsTo(preferredMode);
     }
-    
+ 
+
     this.state = {
       sideBarCompressed : false, 
       contentAreaView : 'main',
       displayPictureLink : displayPictureLink,
       mode : preferredMode
     };
+    
   }
-  
+  componentDidMount(){
+    this.changeAccordingtToResize();
+  }
+
+  changeAccordingtToResize(){
+
+    if(window.innerWidth <= 768){
+      document.getElementsByClassName('SideBarBox')[0].getElementsByClassName('contactArea')[0].style.display = 'none';
+      document.getElementsByClassName('bottomContactArea')[0].style.display = 'block';
+    }
+    else{
+      document.getElementsByClassName('bottomContactArea')[0].style.display = 'none';
+    }
+
+
+  }
+
+
   changeColorsTo(mode){
 
     let newBackgroundColor;
@@ -92,9 +112,15 @@ class App extends React.Component {
   changeContent(newContent){
     if(!this.state.sideBarCompressed){
       //window.alert("I am called");
-      document.getElementById('mainPageSideBar').classList.add('sideBarCompressed');
-      document.getElementsByClassName('SideBarBox')[0].classList.add('sideBarBoxFullWidth');
-      document.getElementsByClassName('ContentArea')[0].classList.add('showMainContent');
+      if(window.innerWidth > 768){
+        document.getElementById('mainPageSideBar').classList.add('sideBarCompressed');
+        document.getElementsByClassName('SideBarBox')[0].classList.add('sideBarBoxFullWidth');
+        document.getElementsByClassName('ContentArea')[0].classList.add('showMainContent');
+      
+      }
+      else{
+        document.getElementsByClassName('ContentArea')[0].classList.add('displayMainContent');
+      }
       //document.getElementsByClassName('ContentArea')[0].style.display = 'block';
 
       
@@ -130,6 +156,7 @@ class App extends React.Component {
       <Header mode={this.state.mode} changeMode={this.changeMode} navChangeFunction={this.changeContent} changeDisplayPicture={this.changeDisplayPicture} contentType={this.state.contentAreaView}></Header>
       <SideBar displayPictureLink = {this.state.displayPictureLink}></SideBar>
       <ContentArea content={this.state.contentAreaView}></ContentArea>
+      <BottomContactArea></BottomContactArea>
     </div>
   );
 }

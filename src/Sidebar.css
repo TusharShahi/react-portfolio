@@ -7,10 +7,11 @@
     padding: 20px;
     font-family: 'Rubik';
     position: fixed;
-    bottom: 0px;
+    bottom: 5%;
     text-align: center;
     /*display: none;*/ 
     /*TODO : top: 70px; */
+    font-size: 200%;
 }
 
 .SideBarBox{
@@ -34,27 +35,6 @@
 
 }
 
-#socialMediaBox{
-    display: flex;
-    width: 50%;
-}
-.SocialMediaLink{
-width: 30%;
-filter: invert(100) sepia(0) saturate(1) hue-rotate(0deg) brightness(100);
-    
-}
-
-.SocialMediaLink:hover{
-    filter: none;
-
-}
-.MediaIconBox img{
-    width: 50%;
-}
-
-.MediaIconBox img:hover{
-    width: 50%;
-}
 
 
 #displayPhotoArea{
@@ -66,6 +46,10 @@ filter: invert(100) sepia(0) saturate(1) hue-rotate(0deg) brightness(100);
     width: 100%;
 }
 
+#welcomeArea{
+    margin-bottom: 15%;
+}
+
 #welcomeArea h2{
     font-weight: 900;
     text-transform: uppercase;
@@ -75,18 +59,56 @@ filter: invert(100) sepia(0) saturate(1) hue-rotate(0deg) brightness(100);
     color : #86c232;
 }
 
-#emailAndPhoneBox{
-    display: flex;
+
+
+@media only screen and (min-width: 992px){
+    .SideBar{
+        font-size: 150%;
+    }
+    
+
 }
 
-#emailAndPhoneBox p{
-    font-size: 60%;
+@media only screen and (max-width: 991px){ 
+    .SideBar{
+        font-size: 120%;
+
+
+    }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 479px){  }
 
-@media only screen and (min-width: 480px) and (max-width: 767px){ }
+@media only screen and (max-width: 768px){
+    .SideBar{
+        width: 60%;
+        font-size: 200%;
+        margin-top: 150px;
+        position: static;
+    }
+    #welcomeArea{
+        margin-bottom: 35%;
+    }
+    
+    .sideBarCompressed{
+        position : static;
+        left: 0%;
+    }
+    
 
-@media only screen and (min-width: 768px) and (max-width: 991px){ }
+     }
+    
 
-@media only screen and (min-width: 992px){  }
+
+@media only screen and (max-width: 479px){ 
+
+    .SideBar{
+        font-size: 150%;
+    }
+
+    #welcomeArea{
+        margin-bottom: 0%;
+    }
+    
+}
+
+
