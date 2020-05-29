@@ -16,12 +16,21 @@ filter: invert(100) sepia(0) saturate(1) hue-rotate(0deg) brightness(100);
     filter: none;
 
 }
-.MediaIconBox img{
-    width: 50%;
+.SocialMediaLink:nth-child(2) > .MediaIconBox{
+    position: relative;
+    top: 5%;
 }
 
-.MediaIconBox img:hover{
-    width: 50%;
+.MediaIconBox{
+    margin: 0% 25%;
+}
+
+.MediaIconBox a{
+    width: 100%;
+}
+
+.MediaIconBox img{
+    width: 100%;
 }
 
 
@@ -34,6 +43,9 @@ filter: invert(100) sepia(0) saturate(1) hue-rotate(0deg) brightness(100);
     flex-direction: column;
 }
 
+#emailAndPhoneBox p{
+    margin: 1% 0%;
+}
 
 #copyrightBox{
     font-size: 30%;

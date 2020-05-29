@@ -17,6 +17,7 @@ class App extends React.Component {
 
   constructor(props){
   super(props);
+    
     this.changeContent = this.changeContent.bind(this);
     this.changeDisplayPicture = this.changeDisplayPicture.bind(this);
     this.changeMode = this.changeMode.bind(this);
@@ -28,8 +29,8 @@ class App extends React.Component {
       preferredMode = 'light';
       this.changeColorsTo(preferredMode);
     }
- 
-
+    //TODO 
+    //window.addEventListener('resize',this.changeAccordingtToResize);
     this.state = {
       sideBarCompressed : false, 
       contentAreaView : 'main',
@@ -43,7 +44,7 @@ class App extends React.Component {
   }
 
   changeAccordingtToResize(){
-
+    //window.alert("boo");
     if(window.innerWidth <= 768){
       document.getElementsByClassName('SideBarBox')[0].getElementsByClassName('contactArea')[0].style.display = 'none';
       document.getElementsByClassName('bottomContactArea')[0].style.display = 'block';

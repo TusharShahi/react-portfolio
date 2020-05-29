@@ -17,7 +17,7 @@ class AbilitiesGroup extends React.Component {
 
             let imageLink = './' + abilities[groupName][i].imageLink + '-icon.svg';
             skillsIcon.push(
-                <li><img src={require(`${imageLink}`)} alt={abilities[groupName][i].name}></img></li>
+                <li><a href={abilities[groupName][i].link} title={abilities[groupName][i].name}><img src={require(`${imageLink}`)} alt={abilities[groupName][i].name}></img></a></li>
             );    
         }
 

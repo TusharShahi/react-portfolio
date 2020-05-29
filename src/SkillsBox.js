@@ -12,19 +12,24 @@ class SkillsBox extends React.Component {
     }
 
     createSkillsBox(skillsList){
-
+        if(skillsList!=null){
+            
         let skillsIcon = [];
         for(let i = 0 ; i < skillsList.length; i++){
 
             let imageLink = './' + skillsList[i].imageLink + '-icon.svg';
             skillsIcon.push(
-                <li><img src={require(`${imageLink}`)} alt={skillsList[i].name}></img></li>
+                <li><a href={skillsList[i].link} title={skillsList[i].name}><img src={require(`${imageLink}`)} alt={skillsList[i].name}></img></a></li>
             );    
         }
 
         let listCode = <ul>{skillsIcon}</ul>
         return listCode;
-    }
+        }
+        else{
+            return null;
+        }
+    }  
 
     render(){
 

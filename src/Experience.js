@@ -18,6 +18,7 @@ class Experience extends React.Component {
                 description = {contentArray[i].description}
                 duration = {contentArray[i].timePeriod}
                 skillsUsed = {contentArray[i].skillsUsed}
+                link = {contentArray[i].companyLink}
             >
             </ExperienceBlock>)
         }
@@ -32,12 +33,12 @@ class Experience extends React.Component {
                     {this.createExperienceBlock([experienceShell,experienceRMO,experienceRMO2])}
                 </div>
                 <div id='school'>
+                    <h1>College</h1> 
                     <div>
 
                     </div>
                     <div>
-                        <ExperienceBlock company='MRM' ></ExperienceBlock>
-                        <ExperienceBlock company='TCFG' ></ExperienceBlock>
+                        {this.createExperienceBlock([experienceMRM,experienceTCFG])}
                     </div>
                 </div>
             </div>);

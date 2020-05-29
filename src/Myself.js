@@ -1,12 +1,11 @@
 import React from 'react';
 import AbilitiesBox from './AbilitiesBox';
 import DesignsBox from './DesignsBox';
-
+import './Myself.css';
 
 
 import {myDescription, myFreeTime, myBrag, myHobbies} from './constants';
 
-import './Myself.css';
 
 
 class Myself extends React.Component {
@@ -35,9 +34,10 @@ class Myself extends React.Component {
                 <h3>{myFreeTime}</h3>
                 </div>
 
+                <DesignsBox></DesignsBox>
                 
                 <AbilitiesBox></AbilitiesBox>
-                <DesignsBox></DesignsBox>
+
             </div>);
         }
         

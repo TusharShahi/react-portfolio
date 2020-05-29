@@ -11,7 +11,7 @@ export const socialMediaLinks  = {
 
 export const myDescription = "Software Engineer based out of Bangalore who enjoys product development. Has experience working at an early stage startup as well as a Fortune 500 company."
 export const myBrag = "Very comfortable with Javascript. Loves to automate."
-export const myFreeTime = "In his freetime, designs, reads books, lifts."
+export const myFreeTime = "In his freetime, designs, reads, lifts."
 export const myHobbies = "Plays football for the chills and has a fondness for the hills."
 
 
@@ -46,38 +46,43 @@ export const workWorkForce = {
 
 
 export const experienceShell = {
+    'companyLink' : 'https://www.shell.in/',
     'company' : 'Shell IT',
     'description' : 'Working as a salesforce software engineer, on an order management application. Have been pivotal in the rollout of the application in Asia and Africa.',
     'timePeriod' : 'July 2019 - ',
-    'skillsUsed' : [{ 'name' : 'Salesforce' , 'imageLink' : 'salesforce'}]
+    'skillsUsed' : [{ 'name' : 'Salesforce' , 'imageLink' : 'salesforce' , 'link' : 'https://developer.salesforce.com/'}]
 }
 
 export const experienceRMO = {
+    'companyLink' : 'https://www.rankme.online/',
     'company' : 'Rank Me Online',
-    'description' : 'Primarily worked to build the online review analysis tool. Involved in building backend of the product dashboard. Was responsible for writing jobs to crawl data, migrate it and maintain . ',
+    'description' : 'Primarily worked to build the online review analysis tool. Involved in building backend of the product dashboard. Was responsible for writing jobs to crawl data, migrate it and maintain. Mentored interns to familiarize them with the project and the tech stack.',
     'timePeriod' : 'December 2018 - June 2019',
     'skillsUsed' : [/*{ 'name' : 'Stanford Core NLP' , 'imageLink' : 'stanfordCoreNLP'},*/
-    { 'name' : 'ElasticSearch' , 'imageLink' : 'elasticSearch'},
-    { 'name' : 'Mongo' , 'imageLink' : 'mongo'},
-    { 'name' : 'TypeScript' , 'imageLink' : 'typeScript'},
-    { 'name' : 'Python 3' , 'imageLink' : 'python3'}]
+    { 'name' : 'ElasticSearch' , 'imageLink' : 'elasticSearch', 'link' : 'https://www.elastic.co/'},
+    { 'name' : 'Mongo' , 'imageLink' : 'mongo' , 'link' : 'https://www.mongodb.com/'},
+    { 'name' : 'TypeScript' , 'imageLink' : 'typeScript' , 'link' : 'https://www.typescriptlang.org/'},
+    { 'name' : 'Python 3' , 'imageLink' : 'python3' , 'link' : 'https://www.typescriptlang.org/'}]
 }
 
 export const experienceRMO2 = {
+    'companyLink' : 'https://www.rankme.online/',
     'company' : 'Rank Me Online',
     'description' : 'As a summer intern, built the product dashboard backend from scratch.',
     'timePeriod' : 'June 2018 - July 2018',
-    'skillsUsed' : [{ 'name' : 'ElasticSearch' , 'imageLink' : 'elasticSearch'},
-    { 'name' : 'TypeScript' , 'imageLink' : 'typeScript'}]
+    'skillsUsed' : [{ 'name' : 'ElasticSearch' , 'imageLink' : 'elasticSearch', 'link' : 'https://www.elastic.co/'},
+    { 'name' : 'TypeScript' , 'imageLink' : 'typeScript', 'link' : 'https://www.typescriptlang.org/'}]
 }
 
 export const experienceMRM = {
+    'companyLink' : 'https://www.facebook.com/MarsRoverManipal/',
     'company' : 'Mars Rover Manipal',
-    'description' : 'Worked in the management subdivision to handle finance, sponsorship and operations of the team.',
+    'description' : 'Worked in the management subdivision to handle finance, sponsorship and operations of the team. As a senior member, mentored juniors to take on the same responsibilities.',
     'timePeriod' : 'December 2016 - May 2018',
 }
 
 export const experienceTCFG = {
+    'companyLink' : 'https://www.facebook.com/TeachCodeforGood/',
     'company' : 'Teach Code for Good',
     'description' : 'Taught easy to grasp skills like HTML, Python to young students in schools in the area. As a senior member, designed curriculums for the same.',
     'timePeriod' : 'December 2016 - November 2019',
@@ -87,56 +92,84 @@ export const abilities = {
     'web':[
     {
         'name' : 'Javascript',
-        'imageLink' : 'javaScript'
+        'imageLink' : 'javaScript',
+        'link' : 'https://www.javascript.com/'
     },
     {
         'name' : 'NodeJs',
-         'imageLink' : 'nodejs'
+        'imageLink' : 'nodejs',
+        'link' : 'https://nodejs.org/en/'
     },
     {
         'name' : 'TypeScript',
-         'imageLink' : 'typeScript'
+        'imageLink' : 'typeScript', 
+        'link' : 'https://www.typescriptlang.org/'
+    },
+    {
+        'name' : 'ReactJS',
+        'imageLink' : 'react', 
+        'link' : 'https://reactjs.org/'
     },
     {
         'name' : 'Salesforce',
-         'imageLink' : 'salesforce'
+        'imageLink' : 'salesforce', 
+        'link' : 'https://developer.salesforce.com/'
     },
     {
         'name' : 'HTML',
-         'imageLink' : 'html5'
+        'imageLink' : 'html5', 
+        'link' : 'https://html.com/'
     },
     {
         'name' : 'CSS',
-         'imageLink' : 'css3'
+        'imageLink' : 'css3', 
+        'link' : 'https://www.w3.org/Style/CSS/Overview.en.html'
     }
     ],
     'database' : [
         {
             'name' : 'Mongo',
-            'imageLink' : 'mongo'
+            'imageLink' : 'mongo', 
+            'link' : 'https://www.mongodb.com/'
         },
         {
             'name' : 'ElasticSearch',
-            'imageLink' : 'elasticSearch'
+            'imageLink' : 'elasticSearch', 
+            'link' : 'https://www.elastic.co/'
         },
     ],
     'core' : [
         {
             'name' : 'C++',
-            'imageLink' : 'cplusplus'
+            'imageLink' : 'cplusplus', 
+            'link' : 'https://www.cplusplus.com/'
+    
         }
     ],
     'tools' : [{
         'name' : 'Git',
-        'imageLink' : 'git'
+        'imageLink' : 'git', 
+        'link' : 'https://git-scm.com/'
     },
     {
         'name' : 'VS Code',
-        'imageLink' : 'git'
+        'imageLink' : 'vsCode', 
+        'link' : 'https://code.visualstudio.com/'
     },
     {
         'name' : 'Linux',
-        'imageLink' : 'linux'
+        'imageLink' : 'linux', 
+        'link' : 'https://www.linux.org/'
+    }],
+    'design' : [{
+        'name' : 'Photoshop',
+        'imageLink' : 'photoshop', 
+        'link' : 'https://www.adobe.com/in/products/photoshop.html'
+    },
+    {
+        'name' : 'Illustrator',
+        'imageLink' : 'illustrator', 
+        'link' : 'https://www.adobe.com/in/products/illustrator.html'
     }]
 
 }
