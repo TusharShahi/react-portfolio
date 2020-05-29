@@ -34,6 +34,7 @@ class Myself extends React.Component {
                 <h3>{myFreeTime}</h3>
                 </div>
 
+                <h3><a href={require(`./resume.pdf`)} download>Download Resume</a></h3>
                 <DesignsBox></DesignsBox>
                 
                 <AbilitiesBox></AbilitiesBox>

@@ -22,26 +22,32 @@ export const codeScribbles = [
 "A python script that emails me my attendance every morning before class at 7 AM, with the subject being either RUN or DO NOT WAKEUP, depending on my attendance for the first class.",
 ]
 
-export const workBMESI = {
-    'project' : 'Emergency Zone',
-    'description' : 'An online single player question answer based game with points system with different levels and sublevels. The game consisted of user authentication, players leaderboard and could be played on all devices. The game was live for 4 days, during the technical college fest of my college and saw a participation of 50 players.',
-    'photos' : [],
-    'link' : ''
-}
 
-export const workMRM = {
-    'project' : 'MRM Website',
-    'description' : "Mars Rover Manipal's website. Complete development and design including those of icons was done from scratch.",
-    'photos' : [],
-    'link' : ''
-}
 
 export const workWorkForce = {
     'project' : 'WorkForce',
-    'description' : "Desktop application to manage the workforce by assigning them time slots and locations in a college campus",
-    'photos' : ['./images/work/workForceScreenShot1.png','./images/work/workForceScreenShot2.png','./images/work/workForceScreenShot3.png'],
-    'link' : ''
+    'description' : "Desktop application to manage the workforce by assigning time slots and locations in a college campus.",
+    'mockup' : "workforce-mockup.png",
+    'link' : "",
+    'altMockupText' : "WorkForce Mockup"
 }
+
+export const workMRMWebsite = {
+    'project' : 'MRM Website',
+    'description' : "Official Website for MRM designed from scratch including all the graphics.",
+    'mockup' : "mrmwebsite-mockup.png",
+    'link' : "www.marsrovermanipal.com",
+    'altMockupText' : "MRM Website Mockup"
+}
+
+export const workEmergencyZone = {
+    'project' : 'Emergency Zone',
+    'description' : "Online single player quiz game hosted during a college fest. Saw a participation of 50 students.",
+    'mockup' : "emergencyzone-mockup.png",
+    'link' : "",
+    'altMockupText' : "Emergency Zone Mockup"
+}
+
 
 
 

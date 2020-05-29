@@ -4,9 +4,18 @@
 }
 
 .ExperienceBlock h3{
-    color:var(--base);
     font-size: 80%;
 }
+
+.ExperienceBlock h3 a:hover{
+    transition: color 0.1s ease-in;
+    color:var(--base);
+}
+
+.ExperienceBlock h3 a:hover{
+    color : var(--headerText);
+}
+
 
 
 .ExperienceBlock h5{

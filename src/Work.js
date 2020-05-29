@@ -1,6 +1,7 @@
 import React from 'react';
-import {workWorkForce } from './constants';
+import {workWorkForce , workEmergencyZone, workMRMWebsite } from './constants';
 import WorkBlock from './WorkBlock';
+import './Work.css';
 
 class Work extends React.Component {
 
@@ -11,13 +12,18 @@ class Work extends React.Component {
 
     createWorkBlock(contentArray){
     
-        let workBlock = []; 
+        let workBlock = [];
         for(let i = 0 ; i < contentArray.length; i++){
-            workBlock.push(<WorkBlock name={contentArray[i].project}
+            workBlock.push(<WorkBlock name={contentArray[i].project} 
+                mockupImage={contentArray[i].mockup} link={contentArray[i].link}
+                description={contentArray[i].description}
+                mockupImageText={contentArray[i].altMockupText}
             >
             </WorkBlock>)
         }
         return workBlock;
+    
+    
     }
 
     createScribblesBlock(textArray){
@@ -31,11 +37,11 @@ class Work extends React.Component {
            return(<div>
                 <h1>Work</h1> 
                 <div>
-                    {this.createWorkBlock([workWorkForce])}
+                    {this.createWorkBlock([ workMRMWebsite, workEmergencyZone, workWorkForce])}
                 </div>
 
                 <div id='scribbles'>
-                    <h3>Other Scribbles</h3>
+                    <h1>Other Scribbles</h1>
 
                 </div>
                 

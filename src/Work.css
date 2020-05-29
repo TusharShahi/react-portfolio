@@ -1,0 +1,34 @@
+.WorkBlock{
+    padding: 2% 0 0 0;
+    margin: 0% 0% 5% 0%;
+}
+
+.WorkBlock h3{
+    font-size: 80%;
+}
+.WorkBlock h3 > a{
+    cursor: auto;
+}
+.WorkBlock h3 .projectHasLink{
+    cursor: pointer;
+    transition: color 0.1s ease-in;
+    color:var(--base);
+}
+
+.WorkBlock h3 .projectHasLink:hover{
+    color : var(--headerText);
+}
+
+.WorkScreenShotsBox{
+    text-align: center;
+    padding: 2%;
+    padding-left: 0%;
+}
+
+.WorkBlock img{
+width: 40%;
+}
+
+.WorkDescription{
+    padding-left: 0%;
+}

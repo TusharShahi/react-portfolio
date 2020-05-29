@@ -5,7 +5,7 @@
 .SkillsBox ul{
     display: flex;
     align-items: flex-start;
-    padding: 2% 0%;
+    padding: 2% 0% 0% 0%
 }
 .SkillsBox li{
     width: 5%;
