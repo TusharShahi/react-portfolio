@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1f3088e2d62e46600a50f056777ee7b9",
+    "revision": "6046e9de955adb87039cbce96e2428ce",
     "url": "/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.dbdaa44c.chunk.css"
   },
   {
-    "revision": "a5e31e7e4dcdd1cf6569",
-    "url": "/static/css/main.1a3da428.chunk.css"
+    "revision": "eab213d7d16dad8830e9",
+    "url": "/static/css/main.0f63fa3c.chunk.css"
   },
   {
     "revision": "f026c5b6bee9353c5d4e",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.1236aba0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a5e31e7e4dcdd1cf6569",
-    "url": "/static/js/main.56e9f2b4.chunk.js"
+    "revision": "eab213d7d16dad8830e9",
+    "url": "/static/js/main.5516f2e4.chunk.js"
   },
   {
     "revision": "8444ae0e1377649995f2",
@@ -178,10 +178,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c1c435205dc2536acd219dad5c2e9634",
     "url": "/static/media/raleway-latin-900italic.c1c43520.woff2"
-  },
-  {
-    "revision": "bcb91c28e5af7cf3b837bfb6a6109efc",
-    "url": "/static/media/resume.bcb91c28.pdf"
   },
   {
     "revision": "239cf85916292b3585d17ba1f7801dbb",
