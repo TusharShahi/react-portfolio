@@ -8,7 +8,6 @@ import { displayPictureLink, colorPalette } from './constants';
 
 import Context from './Context';
 
-//let ThemeContext = React.createContext('LIGHT');
 
 import './App.css';
 import Header from './Header';
@@ -40,7 +39,7 @@ class App extends React.Component {
         document.body.classList.remove('preLoad');
       }
 
-      // ThemeContext = themeName;
+
       if (this.state.theme == 'DARK') {
         this.setState({ theme: 'LIGHT' });
         localStorage.setItem('themeSwitch', 'LIGHT');
@@ -87,43 +86,13 @@ class App extends React.Component {
 
   changeColorsTo(theme) {
     console.log("change colors to " + theme);
-    let newBackgroundColor;
-    let newParaTextColor;
-    let newHeaderTextColor;
-    let newBaseColor;
-    let newPressedColor;
-    let newShadeColor;
 
-    newBackgroundColor = colorPalette[theme.toLowerCase()].background;
-    newParaTextColor = colorPalette[theme.toLowerCase()].text;
-    newHeaderTextColor = colorPalette[theme.toLowerCase()].headers;
-    newBaseColor = colorPalette[theme.toLowerCase()].base;
-    newPressedColor = colorPalette[theme.toLowerCase()].pressed;
-    newShadeColor = colorPalette[theme.toLowerCase()].shade;
-    /*
-    if (theme == 'LIGHT') {
-      newBackgroundColor = colorPalette.light.background;
-      newParaTextColor = colorPalette.light.text;
-      newHeaderTextColor = colorPalette.light.headers;
-      newBaseColor = colorPalette.light.base;
-      newPressedColor = colorPalette.light.pressed;
-
-    }
-    else if (theme == 'DARK') {
-      newBackgroundColor = colorPalette.dark.background;
-      newParaTextColor = colorPalette.dark.text;
-      newHeaderTextColor = colorPalette.dark.headers;
-      newBaseColor = colorPalette.dark.base;
-      newPressedColor = colorPalette.dark.pressed;
-
-    }*/
-
-    document.documentElement.style.setProperty('--background', newBackgroundColor);
-    document.documentElement.style.setProperty('--paraText', newParaTextColor);
-    document.documentElement.style.setProperty('--headerText', newHeaderTextColor);
-    document.documentElement.style.setProperty('--base', newBaseColor);
-    document.documentElement.style.setProperty('--pressed', newPressedColor);
-    document.documentElement.style.setProperty('--shade', newShadeColor);
+    document.documentElement.style.setProperty('--background', colorPalette[theme.toLowerCase()].background);
+    document.documentElement.style.setProperty('--paraText', colorPalette[theme.toLowerCase()].text);
+    document.documentElement.style.setProperty('--headerText', colorPalette[theme.toLowerCase()].headers);
+    document.documentElement.style.setProperty('--base', colorPalette[theme.toLowerCase()].base);
+    document.documentElement.style.setProperty('--pressed', colorPalette[theme.toLowerCase()].pressed);
+    document.documentElement.style.setProperty('--shade', colorPalette[theme.toLowerCase()].shade);
 
 
 
@@ -140,7 +109,6 @@ class App extends React.Component {
   changeContent(newContent) {
     console.log(newContent);
     if (!this.state.sideBarCompressed) {
-      //window.alert("I am called");
       if (window.innerWidth > 768) {
 
         document.getElementById('mainPageSideBar').classList.add('sideBarCompressed');
@@ -153,31 +121,31 @@ class App extends React.Component {
         setTimeout(() => { window.scrollBy(0, (500 - document.body.scrollTop)); }, 200);
         document.getElementsByClassName('ContentArea')[0].classList.add('displayMainContent');
       }
-      //document.getElementsByClassName('ContentArea')[0].style.display = 'block';
 
 
     }
     if (this.state.contentAreaView != newContent) {
-      let newDisplayPictureLink = this.createNewDisplayPictureLink(newContent);
+      //let newDisplayPictureLink = this.createNewDisplayPictureLink(newContent);
       this.setState({
-        contentAreaView: newContent,
-        displayPictureLink: newDisplayPictureLink
+        contentAreaView: newContent
+        //,
+        // displayPictureLink: newDisplayPictureLink
       });
     }
   }
 
   changeDisplayPicture(newContent) {
+    //TODO : Is this a needed feature
     //window.alert("I am calle too");
     //if(this.state.contentAreaView != newContent)
     //{
-    let newDisplayPictureLink = this.createNewDisplayPictureLink(newContent);
+    // let newDisplayPictureLink = this.createNewDisplayPictureLink(newContent);
     // window.alert('new Link is ' + newDisplayPictureLink);
-    this.setState({
-      displayPictureLink: newDisplayPictureLink
-    });
+    // this.setState({
+    //   displayPictureLink: newDisplayPictureLink
+    // });
   }
 
-  //<Header theme={this.state.theme} onChangeTheme={this.changeTheme} navChangeFunction={this.changeContent} changeDisplayPicture={this.changeDisplayPicture} contentType={this.state.contentAreaView}></Header>
 
   render() {
     return (

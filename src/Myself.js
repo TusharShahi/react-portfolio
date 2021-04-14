@@ -1,6 +1,6 @@
 import React from 'react';
 import AbilitiesBox from './AbilitiesBox';
-import DesignsBox from './DesignsBox';
+
 import './Myself.css';
 
 

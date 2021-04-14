@@ -3,19 +3,16 @@ import ContactArea from './ContactArea';
 
 class BottomContactArea extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
 
   }
 
-  render()
-  {
-    //import displayPictureLink from this.props.displayPictureLink;
-    //const displayPictureLink = require(this.props.displayPictureLink);
+  render() {
     return (
       <div className="bottomContactArea">
-          <ContactArea></ContactArea>
-        </div>
+        <ContactArea></ContactArea>
+      </div>
     );
   }
 }

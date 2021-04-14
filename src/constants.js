@@ -12,7 +12,7 @@ export const socialMediaLinks = {
 
 export const myDescription = "Software Engineer based out of Bangalore who enjoys product development. Has experience working at an early stage startup as well as a Fortune 500 company."
 export const myBrag = "Very comfortable with Javascript. Loves to automate."
-export const myFreeTime = "In his freetime, designs, reads, lifts."
+export const myFreeTime = "In his freetime - reads, lifts."
 export const myHobbies = "Plays football for the chills and has a fondness for the hills."
 
 
