@@ -1,43 +1,74 @@
 import React from 'react';
+import { abilities, abilitesNameMapping } from './constants';
 import './SkillsBox.css';
 
 
 class SkillsBox extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {};
         //this.createSkillsBox = this.createSkillsBox.bind(this);
 
     }
 
-    createSkillsBox(skillsList){
-        if(skillsList!=null){
-            
+    createAbilitiesBox(groupName) {
+
+
         let skillsIcon = [];
-        for(let i = 0 ; i < skillsList.length; i++){
 
-            let imageLink = './' + skillsList[i].imageLink + '-icon.svg';
+        for (let i = 0; i < abilities[groupName].length; i++) {
+
+            let imageLink = process.env.PUBLIC_URL + '/images/icons/' + abilities[groupName][i].imageLink + '-icon.svg';
             skillsIcon.push(
-                <li><a href={skillsList[i].link} title={skillsList[i].name}><img src={require(`${imageLink}`)} alt={skillsList[i].name}></img></a></li>
-            );    
+                <li><a href={abilities[groupName][i].link} title={abilities[groupName][i].name}><img src={process.env.PUBLIC_URL + imageLink} alt={abilities[groupName][i].name}></img></a></li>
+            );
         }
 
-        let listCode = <ul>{skillsIcon}</ul>
-        return listCode;
+        let listCode = <ul>{skillsIcon}</ul>;
+        let skillsListBox = <div><p>{abilitesNameMapping[groupName]} :</p>{listCode}</div>
+        return skillsListBox;
+
+    }
+    createSkillsBox(skillsList) {
+
+        if (skillsList != null) {
+
+            let skillsIcon = [];
+            for (let i = 0; i < skillsList.length; i++) {
+
+                let imageLink = process.env.PUBLIC_URL + '/images/icons/' + skillsList[i].imageLink + '-icon.svg';
+                skillsIcon.push(
+
+                    <li><a rel="noopener noreferrer" target="_blank" href={skillsList[i].link} title={skillsList[i].name}><img src={process.env.PUBLIC_URL + imageLink} alt={skillsList[i].name}></img></a></li>
+
+                );
+            }
+
+            let listCode = <ul>{skillsIcon}</ul>
+            let skillsListBox = <div><p>Skills Used : </p>{listCode}</div>
+            return skillsListBox;
+
+
         }
-        else{
+        else {
             return null;
         }
-    }  
 
-    render(){
+    }
 
-           return(<div className='SkillsBox'>
-            {this.createSkillsBox(this.props.skillsList)}   
-            </div>);
+    render() {
+        let mainBox = <div className='SkillsBox'>
+            {this.createSkillsBox(this.props.skillsList)}
+        </div>;
+        if (this.props.type == 'abilities') {
+            mainBox = <div className='SkillsBox'>
+                {this.createAbilitiesBox(this.props.groupName)}
+            </div>;
         }
-        
+        return mainBox;
+    }
+
 }
 
 

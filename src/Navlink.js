@@ -1,41 +1,40 @@
 import React from 'react';
 import cx from 'classnames';
+import './Navlink.css';
 
-class Navlink extends React.Component{
-  constructor(props){
+class Navlink extends React.Component {
+  constructor(props) {
     super(props);
     this.changeMainPageContent = this.changeMainPageContent.bind(this);
-    this.toggleHover = this.toggleHover.bind(this);
-    this.restoreHover = this.restoreHover.bind(this);
+    this.keyPressChangeMainContent = this.keyPressChangeMainContent.bind(this);
+
   }
 
   changeMainPageContent(e) {
+    console.log("change main content");
     e.preventDefault();
     return this.props.navChangeFunction(this.props.linkAddress)
   }
 
-  toggleHover(e){
-    e.preventDefault();
-    return this.props.changeDisplayPicture(this.props.linkAddress);
-    //window.alert('boom');
-  }
-
-  restoreHover(e){
-    e.preventDefault();
-    return this.props.changeDisplayPicture(this.props.contentType);
+  keyPressChangeMainContent(e) {
+    console.log("key pressed");
+    if (e.keyCode == '13' || e.keyCode == 32) {
+      this.changeMainPageContent(e);
+    }
   }
 
   render() {
     const isClicked = this.props.contentType == this.props.linkAddress ? true : false;
+    console.log(this.props.linkAddress);
+    console.log(this.props.contentType);
     return (
       <div className="Navlink">
-          <a onClick={this.changeMainPageContent}
-            /*TODO : some issue */
-             onMouseOver={this.toggleHover} onMouseOut={this.restoreHover}     
-            className={cx({
-                clicked: isClicked
-              })}
-          >{this.props.linkText}</a>
+        <div onClick={this.changeMainPageContent} onKeyDown={this.keyPressChangeMainContent}
+          tabIndex="0" role="button"
+          className={cx({
+            clicked: isClicked
+          })}
+        >{this.props.linkText}</div>
       </div>
     );
   }

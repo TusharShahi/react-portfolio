@@ -4,44 +4,44 @@ import DesignsBox from './DesignsBox';
 import './Myself.css';
 
 
-import {myDescription, myFreeTime, myBrag, myHobbies} from './constants';
+import { myDescription, myFreeTime, myBrag, myHobbies } from './constants';
 
 
 
 class Myself extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {};
     }
 
 
-    render(){
+    render() {
 
 
-           return(<div className='Myself'>
-                <h1>Myself</h1> 
-                <div id='description'>
-                <h3>{myDescription}</h3>
-                </div>                
-                <div id='javascriptBrag'>
-                <h3>{myBrag}</h3>
-                </div>
-                <div id='hobbies'>
-                <h3>{myHobbies}</h3>
-                </div>
-                <div id='freeTime'>
-                <h3>{myFreeTime}</h3>
-                </div>
+        return (<div className='Myself'>
+            <h1>Myself</h1>
+            <div id='description'>
+                <p>{myDescription}</p>
+            </div>
+            <div id='javascriptBrag'>
+                <p>{myBrag}</p>
+            </div>
+            <div id='hobbies'>
+                <p>{myHobbies}</p>
+            </div>
+            <div id='freeTime'>
+                <p>{myFreeTime}</p>
+            </div>
 
-                <h3><a href={require(`./resume.pdf`)} download>Download Resume</a></h3>
-                <DesignsBox></DesignsBox>
-                
-                <AbilitiesBox></AbilitiesBox>
+            <p id='resumeLink'><a rel="noopener noreferrer" target="_blank" href={require(`./resume.pdf`)} download>Download Resume 	&#11015;</a></p>
+            {/*<DesignsBox></DesignsBox>*/}
 
-            </div>);
-        }
-        
+            <AbilitiesBox></AbilitiesBox>
+
+        </div>);
+    }
+
 }
 
 

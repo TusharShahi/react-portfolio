@@ -1,26 +1,34 @@
 import React from 'react';
 import Navbar from './Navbar';
-import './Header.css'
-import ModeSwitchToggler from './ModeSwitchToggler';
+import ModeToggler from './ModeToggler';
+import './Header.css';
+
 
 class Header extends React.Component {
-  
-  
-  constructor(props){
+
+
+  constructor(props) {
     super(props);
 
-  } 
-  
-  render()
-  {
+  }
+
+  componentDidUpdate(prevProps) {
+  }
+
+
+
+
+
+  render() {
+
     return (
       <div className="Header">
-          <ModeSwitchToggler mode={this.props.mode} changeMode={this.props.changeMode}></ModeSwitchToggler>
-          <Navbar navChangeFunction={this.props.navChangeFunction} changeDisplayPicture={this.props.changeDisplayPicture} contentType={this.props.contentType}></Navbar>
-      </div>
+        <ModeToggler></ModeToggler>
+        <Navbar navChangeFunction={this.props.navChangeFunction} changeDisplayPicture={this.props.changeDisplayPicture} contentType={this.props.contentType}></Navbar>
+      </div >
     );
   }
-  
+
 }
-  
+
 export default Header;

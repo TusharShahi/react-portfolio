@@ -4,34 +4,35 @@ import Myself from './Myself';
 import Experience from './Experience';
 import './ContentArea.css';
 
+
 class ContentArea extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {content: this.props.content};
+        this.state = { content: this.props.content };
 
     }
 
-    render(){
+    render() {
         let contentAreaCode;
-        let contentType = this.props.content; 
-        if(contentType == 'experience'){
+        let contentType = this.props.content;
+        if (contentType == 'experience') {
             contentAreaCode = <Experience></Experience>
         }
-        else if(contentType=='work'){
+        else if (contentType == 'work') {
             contentAreaCode = <Work></Work>
         }
-        else if(contentType=='else'){
+        else if (contentType == 'else') {
             contentAreaCode = <Myself></Myself>
         }
 
         return (
             <div className="ContentArea">
-            {contentAreaCode}
+                {contentAreaCode}
             </div>
-          );
-        }
-        
+        );
     }
+
+}
 
 
 export default ContentArea;

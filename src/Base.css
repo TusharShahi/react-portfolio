@@ -1,17 +1,33 @@
 /** Variable Declaration **/
 
+/*
 :root {
   --background: #222629; 
   --paraText : #6b6e70;
   --headerText : #86c232;
-  --base : #ffffff;
+  --base : #212121;
+  --pressed: #c5c6c8;
 }
+*/
+/*
+:root {
+  --background: #fff; 
+  --paraText : #15202b;
+  --headerText : #192734;
+  --base : #212121;
+  --pressed: #22303c;
+
+}*/
+
+
 
 /* Mode Change Animations */
-body{
+body,a{
   transition: color 0.5s ease-in 0.5s, background-color 0.5s ease-in 0.5s;
 }
 
+div{
+}
 
 /* Remove Transitions on pageLoad */
 .preLoad{
@@ -41,7 +57,7 @@ body,html,div,h1,h2,h3,h4,h5, p,a, ul, li{
   }
 
   a{
-    color : #fff;
+    color : var(--base);
   }
 
 #root{
@@ -58,7 +74,7 @@ body {
     align-items: center;
     /* To remove vertical top margin */
    /* justify-content: center; */
-    color: white;
+    color: var(--base);
     font-family: 'Raleway';
 
   }

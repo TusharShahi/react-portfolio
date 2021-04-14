@@ -5,26 +5,15 @@
     font-size: 150%;
 }
 
-.Navbar{
-    display: flex;
-    width: 40%;
-    float: right;
-    padding: 0 5%;
-    }
-    
-.Navlink{
-        margin: 5% 10%;
-        font-family: 'Rubik';
-        font-weight: 600;
-        text-transform: uppercase;
-    }
-.clicked {
-        color : #c5c6c8;
-        /*text-decoration: underline dotted #EA215A;*/
-    }
 
-
-
+    .modeChangeButton{
+        width: 70px;
+        text-align: center;
+    }
+    .modeChangeButton:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    }
 
     @media only screen and (min-width: 992px){
 
@@ -55,7 +44,11 @@
             .Navlink{
                 margin: 0 auto;
             }
-        
+        .modeChangeButton{
+       font-size: 18px;
+    position: relative;
+    bottom: 20px; }
+
          }
         
 

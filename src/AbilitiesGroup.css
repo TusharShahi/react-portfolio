@@ -46,7 +46,9 @@ margin: 5% 0 0 0;
 
 @media only screen and (max-width: 768px){
 
-
+    .AbilitiesBox{
+        margin: 10% 0 0 0;
+    }
     .AbilitiesGroup ul{
         justify-content : center;
     }

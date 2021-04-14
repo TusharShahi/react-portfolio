@@ -1,5 +1,4 @@
 .SkillsBox img{
-    
 }
 
 .SkillsBox ul{
@@ -11,9 +10,18 @@
     width: 5%;
     margin: 0% 5% 0% 0%;
 }
+.SkillsBox p{
+    padding-top: 20px;
+}
 
-.SkilllsBox a {
+.SkillsBox a {
     width: 100%;
+}
+.SkillsBox li:hover{
+    transform: scale(1.2);
+
+}
+.SkillsBox a:hover{
 }
 .SkillsBox img{
     width: 100%;
@@ -31,13 +39,13 @@
 
 @media only screen and (max-width: 768px){
     .SkillsBox ul{
-        width: 50%;
+
         padding: 5% 0%;
-        justify-content: center;
+
     }
     .SkillsBox li{
-        width: 15%;
-        margin: 0% 5%;
+        width: 40px;
+        margin: 0% 2%;
     }
 
      }
