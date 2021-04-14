@@ -12,7 +12,7 @@ class AbilitiesBox extends React.Component {
 
     render() {
         return (<div className='AbilitiesBox'>
-            <h1>Abilities</h1>
+            <h2>Abilities</h2>
             <SkillsBox groupName='web' type="abilities"></SkillsBox>
             <SkillsBox groupName='database' type="abilities"></SkillsBox>
             <SkillsBox groupName='tools' type="abilities"></SkillsBox>

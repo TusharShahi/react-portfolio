@@ -64,7 +64,7 @@ export const experienceShell = {
     'companyLink': 'https://play.google.com/store/apps/details?id=com.shell.sitibv.myjiffylube&hl=en&gl=US',
     'role': 'Software Engineer',
     'company': 'Shell IT',
-    'description': 'As a salesforce developer, pivotal in golive and updates of MyJiffyLube app. Used component based development while working on a mobile app for MyJiffyLube. Responsible for front end development focusing on accessibility.',
+    'description': 'As a salesforce developer, pivotal in golive and updates of MyJiffyLube app. Responsible for front end development focusing on accessibility.',
     'timePeriod': 'July 2019 - ',
     'skillsUsed': [{ 'name': 'Salesforce', 'imageLink': 'salesforce', 'link': 'https://developer.salesforce.com/' },
     {
@@ -112,7 +112,7 @@ export const experienceMRM = {
 export const experienceTCFG = {
     'companyLink': 'https://www.facebook.com/TeachCodeforGood/',
     'company': 'Teach Code for Good',
-    'description': 'Taught easy to grasp skills like HTML, Python to young students in schools in the area. As a senior member, designed curriculums for the same.',
+    'description': 'Taught easy to grasp skills like HTML, Python to students in schools proximity. Went on to design curriculum for the same.',
     'timePeriod': 'December 2016 - November 2019',
 }
 

@@ -29,12 +29,12 @@ class Experience extends React.Component {
 
     render() {
         return (<div>
-            <h1>Experience</h1>
+            <h2>Experience</h2>
             <div id='corporate'>
                 {this.createExperienceBlock([experienceShell, experienceRMO, experienceRMO2])}
             </div>
             <div id='school'>
-                <h1>College</h1>
+                <h2>College</h2>
                 <div>
 
                 </div>

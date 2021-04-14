@@ -20,7 +20,7 @@ class Myself extends React.Component {
 
 
         return (<div className='Myself'>
-            <h1>Myself</h1>
+            <h2>Myself</h2>
             <div id='description'>
                 <p>{myDescription}</p>
             </div>
@@ -34,7 +34,7 @@ class Myself extends React.Component {
                 <p>{myFreeTime}</p>
             </div>
 
-            <p id='resumeLink'><a rel="noopener noreferrer" target="_blank" href={require(`./resume.pdf`)} download>Download Resume 	&#11015;</a></p>
+            <p id='resumeLink'><a rel="noopener noreferrer" target="_blank" href={process.env.PUBLIC_URL + '/Resume.pdf'} download>Download Resume 	&#11015;</a></p>
             {/*<DesignsBox></DesignsBox>*/}
 
             <AbilitiesBox></AbilitiesBox>

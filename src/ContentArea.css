@@ -17,7 +17,7 @@
     color : var(--paraText);    
 }
 
-.ContentArea h1 {
+.ContentArea h2 {
     margin: 3% 0;
     text-transform: uppercase;
     color: var(--headerText);
