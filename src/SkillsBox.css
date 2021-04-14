@@ -1,4 +1,6 @@
-.SkillsBox img{
+.SkillsBox img[alt='Salesforce']{
+    position: relative;
+    top: 10px;
 }
 
 .SkillsBox ul{

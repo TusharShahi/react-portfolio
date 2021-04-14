@@ -38,7 +38,7 @@ class Work extends React.Component {
         return (<div>
             <h1>Work</h1>
             <div>
-                {this.createWorkBlock([workWorkForce, workMRMWebsite, workEmergencyZone, workWorkForce])}
+                {this.createWorkBlock([workFlixRemote, workMRMWebsite, workEmergencyZone, workWorkForce])}
             </div>
             {/*
                 <div id='scribbles'>

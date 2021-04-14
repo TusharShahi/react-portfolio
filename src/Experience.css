@@ -4,7 +4,7 @@
     background-color: var(--shade);
     padding: 2%;
     border-radius:5px;
-    transition: color 0.5s ease-in 0.5s, background-color 0.5s ease-in 0.5s;
+    transition: color 0.5s ease-in, background-color 0.5s ease-in;
 }
 .ExperienceBlock .role{
     font-size: 60%;
@@ -31,17 +31,19 @@
     color:var(--paraText);
     font-size: 60%;
     font-weight: 400;
+
 }
 
 .DescriptionBox{
 padding: 2% 0 0 0;
+
 }
 
 
 /* For SF logo */
-.ExperienceBlock:nth-child(1) img{
+/*.ExperienceBlock:nth-child(1) img{
     width: 130%;
-}
+}*/
 
 
 

@@ -26,7 +26,7 @@ export const codeScribbles = [
 
 export const workFlixRemote = {
     'project': 'flixRemote',
-    'description': "Chrome Extension that converts your mobile into a Netflix Remote.",
+    'description': "Chrome Extension that lets you control Netflix using your phone.",
     'mockup': "/images/work/workforce-mockup.png",
     'link': "https://chrome.google.com/webstore/detail/flixremote-your-netflix-r/jkhffbfbokiincaebolhpcfdkhiipalh?hl=en",
     'altMockupText': "Chrome Extension Mockup"
@@ -35,7 +35,7 @@ export const workFlixRemote = {
 
 export const workWorkForce = {
     'project': 'WorkForce',
-    'description': "Desktop application to manage the workforce by assigning time slots and locations in a college campus.",
+    'description': "Desktop application to manage the workforce in a college campus.",
     'mockup': "/images/work/workforce-mockup.png",
     'link': "",
     'altMockupText': "WorkForce Mockup"
@@ -43,7 +43,7 @@ export const workWorkForce = {
 
 export const workMRMWebsite = {
     'project': 'MRM Website',
-    'description': "Official Website for MRM designed from scratch including all the graphics.",
+    'description': "Official Website for Mars Rover Manipal.",
     'mockup': "/images/work/mrmwebsite-mockup.png",
     'link': "http://www.marsrovermanipal.com",
     'altMockupText': "MRM Website Mockup"
@@ -51,7 +51,7 @@ export const workMRMWebsite = {
 
 export const workEmergencyZone = {
     'project': 'Emergency Zone',
-    'description': "Online single player quiz game hosted during a college fest. Saw a participation of 50 students.",
+    'description': "Single Player Quiz Game for college technical fest.",
     'mockup': "/images/work/emergencyzone-mockup.png",
     'link': "",
     'altMockupText': "Emergency Zone Mockup"
@@ -61,12 +61,22 @@ export const workEmergencyZone = {
 
 
 export const experienceShell = {
-    'companyLink': 'https://www.shell.in/',
+    'companyLink': 'https://play.google.com/store/apps/details?id=com.shell.sitibv.myjiffylube&hl=en&gl=US',
     'role': 'Software Engineer',
     'company': 'Shell IT',
-    'description': 'As a salesforce developer : 1. Pivotal in rollout of an order management application in Asia and Africa. 2. Used component based development while working on a mobile app for MyJiffyLube. Responsible for UI design focusing on accessibility.',
+    'description': 'As a salesforce developer, pivotal in golive and updates of MyJiffyLube app. Used component based development while working on a mobile app for MyJiffyLube. Responsible for front end development focusing on accessibility.',
     'timePeriod': 'July 2019 - ',
-    'skillsUsed': [{ 'name': 'Salesforce', 'imageLink': 'salesforce', 'link': 'https://developer.salesforce.com/' }]
+    'skillsUsed': [{ 'name': 'Salesforce', 'imageLink': 'salesforce', 'link': 'https://developer.salesforce.com/' },
+    {
+        'name': 'Javascript',
+        'imageLink': 'javaScript',
+        'link': 'https://www.javascript.com/'
+    }, {
+        'name': 'CSS',
+        'imageLink': 'css3',
+        'link': 'https://www.w3.org/Style/CSS/Overview.en.html'
+    }
+    ]
 }
 
 export const experienceRMO = {

@@ -11,7 +11,6 @@
     /*display: none;*/ 
     /*TODO : top: 70px; */
     font-size: 200%;
-    transition: color 0.5s ease-in 0.5s, background-color 0.5s ease-in 0.5s;
 }
 
 
@@ -51,18 +50,19 @@
 #welcomeArea{
     margin-bottom: 15%;
 
-    transition: color 0.5s ease-in 0.5s, background-color 0.5s ease-in 0.5s;
+
 }
 
 #welcomeArea h1{
     font-weight: 700;
     text-transform: uppercase;
+
+
 }
 
 #nameSpan{
  
     color : var(--headerText);
-    transition: color 0.5s ease-in 0.5s, background-color 0.5s ease-in 0.5s;
 
 }
 

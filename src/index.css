@@ -5,7 +5,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: color 0.5s ease-in 0.5s, background-color 0.5s ease-in 0.5s;
 
 }
 
