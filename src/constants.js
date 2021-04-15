@@ -108,23 +108,24 @@ export const experienceMRM = {
     'companyLink': 'https://www.facebook.com/MarsRoverManipal/',
     'company': 'Mars Rover Manipal',
     'description': 'Handled finance, sponsorship, public relations, social media and other documentation. Ensured smooth working of the team. Mentored juniors to take on same role.',
-    'timePeriod': 'December 2016 - May 2018',
+    'timePeriod': 'November 2016 - July 2018'
+    //,'timePeriod' : 'College'
 }
 
 export const experienceTCFG = {
     'companyLink': 'https://www.facebook.com/TeachCodeforGood/',
     'company': 'Teach Code for Good',
     'description': 'Volunteered as an HTML and Python teacher in schools in proximity. Went on to design the curriculum for the same.',
-    'timePeriod': 'December 2016 - November 2019',
+    'timePeriod': 'November 2016 - December 2018',
 }
 
 export const abilities = {
     'web': [
-        {
+        /*{
             'name': 'Javascript',
             'imageLink': 'javaScript',
             'link': 'https://www.javascript.com/'
-        },
+        },*/
         {
             'name': 'NodeJs',
             'imageLink': 'nodejs',
