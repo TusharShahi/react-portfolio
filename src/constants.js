@@ -12,7 +12,7 @@ export const socialMediaLinks = {
     'github': 'https://github.com/TusharShahi',
 }
 
-export const myDescription = "Software Engineer based out of Bangalore who enjoys product development. Has experience working at an early stage startup as well as a Fortune 500 company."
+export const myDescription = "Software Engineer based out of Delhi who enjoys product development. Has experience working at an early stage startup as well as a Fortune 500 company."
 export const myBrag = "Very comfortable with Javascript. Loves to automate."
 export const myFreeTime = "In his freetime - reads, lifts."
 export const myHobbies = "Plays football for the chills and has a fondness for the hills."
@@ -28,7 +28,7 @@ export const codeScribbles = [
 
 export const workFlixRemote = {
     'project': 'flixRemote',
-    'description': "Chrome Extension that lets you control Netflix using your phone.",
+    'description': "Remote for your Netflix Stream",
     'mockup': "/images/work/workforce-mockup.png",
     'link': "https://chrome.google.com/webstore/detail/flixremote-your-netflix-r/jkhffbfbokiincaebolhpcfdkhiipalh?hl=en",
     'altMockupText': "Chrome Extension Mockup"
@@ -37,7 +37,7 @@ export const workFlixRemote = {
 
 export const workWorkForce = {
     'project': 'WorkForce',
-    'description': "Desktop application to manage the workforce in a college campus.",
+    'description': "Desktop application to manage work force at a college campus",
     'mockup': "/images/work/workforce-mockup.png",
     'link': "",
     'altMockupText': "WorkForce Mockup"
@@ -45,7 +45,7 @@ export const workWorkForce = {
 
 export const workMRMWebsite = {
     'project': 'MRM Website',
-    'description': "Official Website for Mars Rover Manipal.",
+    'description': "Official Website for Mars Rover Manipal",
     'mockup': "/images/work/mrmwebsite-mockup.png",
     'link': "http://www.marsrovermanipal.com",
     'altMockupText': "MRM Website Mockup"
@@ -53,7 +53,7 @@ export const workMRMWebsite = {
 
 export const workEmergencyZone = {
     'project': 'Emergency Zone',
-    'description': "Single Player Quiz Game for college technical fest.",
+    'description': "Online biology based quiz game",
     'mockup': "/images/work/emergencyzone-mockup.png",
     'link': "",
     'altMockupText': "Emergency Zone Mockup"
@@ -85,7 +85,7 @@ export const experienceRMO = {
     'companyLink': 'https://www.rankme.online/',
     'role': 'Software Engineering Intern',
     'company': 'Rank Me Online',
-    'description': 'Primarily worked to build the online review analysis tool. Involved in building backend of the product dashboard. Was responsible for writing jobs to crawl data, migrate it and maintain. Mentored interns to familiarize them with the project and the tech stack.',
+    'description': 'Built online review analysis tool. Enhanced existing product dashboard with more insightful data analysis features. Created influencer discovery platform from scratch. Mentored interns to successfully onboard them to the project.',
     'timePeriod': 'December 2018 - June 2019',
     'skillsUsed': [/*{ 'name' : 'Stanford Core NLP' , 'imageLink' : 'stanfordCoreNLP'},*/
         { 'name': 'ElasticSearch', 'imageLink': 'elasticSearch', 'link': 'https://www.elastic.co/' },
@@ -98,7 +98,7 @@ export const experienceRMO2 = {
     'companyLink': 'https://www.rankme.online/',
     'role': 'Software Engineering Intern',
     'company': 'Rank Me Online',
-    'description': 'As a summer intern, built the product dashboard backend from scratch.',
+    'description': 'Built the new product dashboard of the B2B Online Reputation Management tool. The dashboard provided efficient searching, filtering and aggregations of social media data.',
     'timePeriod': 'June 2018 - July 2018',
     'skillsUsed': [{ 'name': 'ElasticSearch', 'imageLink': 'elasticSearch', 'link': 'https://www.elastic.co/' },
     { 'name': 'TypeScript', 'imageLink': 'typeScript', 'link': 'https://www.typescriptlang.org/' }]
@@ -107,14 +107,14 @@ export const experienceRMO2 = {
 export const experienceMRM = {
     'companyLink': 'https://www.facebook.com/MarsRoverManipal/',
     'company': 'Mars Rover Manipal',
-    'description': 'Worked in the management subdivision to handle finance, sponsorship and operations of the team. As a senior member, mentored juniors to take on the same responsibilities.',
+    'description': 'Handled finance, sponsorship, public relations, social media and other documentation. Ensured smooth working of the team. Mentored juniors to take on same role.',
     'timePeriod': 'December 2016 - May 2018',
 }
 
 export const experienceTCFG = {
     'companyLink': 'https://www.facebook.com/TeachCodeforGood/',
     'company': 'Teach Code for Good',
-    'description': 'Taught easy to grasp skills like HTML, Python to students in schools proximity. Went on to design curriculum for the same.',
+    'description': 'Volunteered as an HTML and Python teacher in schools in proximity. Went on to design the curriculum for the same.',
     'timePeriod': 'December 2016 - November 2019',
 }
 
@@ -139,12 +139,12 @@ export const abilities = {
             'name': 'ReactJS',
             'imageLink': 'react',
             'link': 'https://reactjs.org/'
-        },
+        }/*,
         {
             'name': 'Salesforce',
             'imageLink': 'salesforce',
             'link': 'https://developer.salesforce.com/'
-        },
+        }*/,
         {
             'name': 'HTML',
             'imageLink': 'html5',
