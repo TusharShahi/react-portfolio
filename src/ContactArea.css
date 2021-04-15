@@ -97,6 +97,10 @@ transform: scale(1.5);
         margin: 2%;
         padding: 4% 0;
     }
+    #emailAndPhoneBox a{
+        padding: 5% 0%;
+        display: block;
+    }    
 
     .SocialMediaLink{
         padding: 5%;

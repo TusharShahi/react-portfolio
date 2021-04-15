@@ -59,7 +59,7 @@ class App extends React.Component {
     this.state = {
       sideBarCompressed: false,
       contentAreaView: 'main',
-      displayPictureLink: isMobile ? displayPictureLink : displayPictureLinkPhone,
+      displayPictureLink: isMobile ? displayPictureLinkPhone : displayPictureLink,
       theme: preferredTheme,
       toggleTheme: this.toggleTheme
     };
