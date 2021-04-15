@@ -23,7 +23,7 @@ class ModeToggler extends React.Component {
         return (
             <Context.Consumer>
                 {({ theme, toggleTheme }) => (
-                    <div className="modeChangeButton" ref={this.buttonRef} role="button" tabindex="0" onClick={toggleTheme} onKeyDown={this.keyDown}>
+                    <div className="modeChangeButton" ref={this.buttonRef} role="button" tabIndex="0" onClick={toggleTheme} onKeyDown={this.keyDown}>
                         {theme.toUpperCase()}
                     </div>
                 )}

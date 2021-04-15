@@ -38,6 +38,9 @@ transform: scale(1.5);
 .MediaIconBox a{
     width: 100%;
 
+    width: 25px;
+    display: block;
+    padding: 2px;
 }
 
 .MediaIconBox img{
@@ -92,8 +95,25 @@ transform: scale(1.5);
         display: flex;
         font-size: 30%;
         margin: 2%;
+        padding: 4% 0;
     }
 
+    .SocialMediaLink{
+        padding: 5%;
+    }
+    
+    #socialMediaBox{
+        display: flex;
+        width: 70%;
+    
+    }
+    .MediaIconBox a{
+    
+        width: 25px;
+        display: block;
+        padding: 2px;
+    }
+    
 
      }
     

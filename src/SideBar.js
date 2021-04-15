@@ -2,6 +2,7 @@ import React from 'react';
 import './Sidebar.css';
 import ContactArea from './ContactArea';
 
+
 class SideBar extends React.Component {
 
   constructor(props) {
@@ -12,13 +13,14 @@ class SideBar extends React.Component {
   render() {
     //import displayPictureLink from this.props.displayPictureLink;
     //const displayPictureLink = require(this.props.displayPictureLink);
+    let displayPictureLink = this.props.displayPictureLink;
     return (
       <div className="SideBar" id="mainPageSideBar">
         <div className='SideBarBox'>
 
           <div id='welcomeArea'>
             <div id='displayPhotoArea'>
-              <img src={process.env.PUBLIC_URL + this.props.displayPictureLink} alt='Display Picture'></img>
+              <img src={process.env.PUBLIC_URL + displayPictureLink} alt='Display Picture'></img>
             </div>
 
             <div id='textArea'>

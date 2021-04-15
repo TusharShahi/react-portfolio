@@ -4,8 +4,8 @@ import "typeface-raleway";
 import 'typeface-bebas-neue';
 import 'typeface-rubik';
 
-import { displayPictureLink, colorPalette } from './constants';
-
+import { displayPictureLink, displayPictureLinkPhone, colorPalette } from './constants';
+import { isMobile } from 'react-device-detect';
 import Context from './Context';
 
 
@@ -59,7 +59,7 @@ class App extends React.Component {
     this.state = {
       sideBarCompressed: false,
       contentAreaView: 'main',
-      displayPictureLink: displayPictureLink,
+      displayPictureLink: isMobile ? displayPictureLink : displayPictureLinkPhone,
       theme: preferredTheme,
       toggleTheme: this.toggleTheme
     };

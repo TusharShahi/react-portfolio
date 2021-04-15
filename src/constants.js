@@ -1,4 +1,6 @@
-export const displayPictureLink = '/images/displayPicture-experience.png';
+export const displayPictureLink = '/images/displayPicture-experience.jpg';
+export const displayPictureLinkPhone = '/images/displayPicture-experience-phone.jpg';
+
 export const socialMediaIconLink = '/images/icons/socialMediaIcon-instagram.svg';
 
 export const phoneNumber = '+91-8860129729';
