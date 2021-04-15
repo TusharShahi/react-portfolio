@@ -1,4 +1,4 @@
-export const displayPictureLink = '/images/displayPicture-experience.jpg';
+export const displayPictureLink = '/images/displayPicture-experience-phone.jpg';
 export const displayPictureLinkPhone = '/images/displayPicture-experience-phone.jpg';
 
 export const socialMediaIconLink = '/images/icons/socialMediaIcon-instagram.svg';
