@@ -11,13 +11,13 @@ class Navlink extends React.Component {
   }
 
   changeMainPageContent(e) {
-    console.log("change main content");
+    //console.log("change main content");
     e.preventDefault();
     return this.props.navChangeFunction(this.props.linkAddress)
   }
 
   keyPressChangeMainContent(e) {
-    console.log("key pressed");
+    //console.log("key pressed");
     if (e.keyCode == '13' || e.keyCode == 32) {
       this.changeMainPageContent(e);
     }
@@ -25,8 +25,8 @@ class Navlink extends React.Component {
 
   render() {
     const isClicked = this.props.contentType == this.props.linkAddress ? true : false;
-    console.log(this.props.linkAddress);
-    console.log(this.props.contentType);
+    //console.log(this.props.linkAddress);
+    //console.log(this.props.contentType);
     return (
       <div className="Navlink">
         <div onClick={this.changeMainPageContent} onKeyDown={this.keyPressChangeMainContent}

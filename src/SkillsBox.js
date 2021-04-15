@@ -21,7 +21,7 @@ class SkillsBox extends React.Component {
 
             let imageLink = '/images/icons/' + abilities[groupName][i].imageLink + '-icon.svg';
             skillsIcon.push(
-                <li><a href={abilities[groupName][i].link} title={abilities[groupName][i].name}><img src={process.env.PUBLIC_URL + imageLink} alt={abilities[groupName][i].name}></img></a></li>
+                <li key={i}><a href={abilities[groupName][i].link} title={abilities[groupName][i].name}><img src={process.env.PUBLIC_URL + imageLink} alt={abilities[groupName][i].name}></img></a></li>
             );
         }
 
@@ -40,7 +40,7 @@ class SkillsBox extends React.Component {
                 let imageLink = '/images/icons/' + skillsList[i].imageLink + '-icon.svg';
                 skillsIcon.push(
 
-                    <li><a rel="noopener noreferrer" target="_blank" href={skillsList[i].link} title={skillsList[i].name}><img src={process.env.PUBLIC_URL + imageLink} alt={skillsList[i].name}></img></a></li>
+                    <li key={i}><a rel="noopener noreferrer" target="_blank" href={skillsList[i].link} title={skillsList[i].name}><img src={process.env.PUBLIC_URL + imageLink} alt={skillsList[i].name}></img></a></li>
 
                 );
             }

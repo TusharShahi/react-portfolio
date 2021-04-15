@@ -85,7 +85,7 @@ class App extends React.Component {
 
 
   changeColorsTo(theme) {
-    console.log("change colors to " + theme);
+    //console.log("change colors to " + theme);
 
     document.documentElement.style.setProperty('--background', colorPalette[theme.toLowerCase()].background);
     document.documentElement.style.setProperty('--paraText', colorPalette[theme.toLowerCase()].text);
@@ -107,7 +107,7 @@ class App extends React.Component {
   }
 
   changeContent(newContent) {
-    console.log(newContent);
+    //console.log(newContent);
     if (!this.state.sideBarCompressed) {
       if (window.innerWidth > 768) {
 
@@ -117,7 +117,7 @@ class App extends React.Component {
 
       }
       else {
-        console.log(window.scrollTop);
+        //console.log(window.scrollTop);
         setTimeout(() => { window.scrollBy(0, (500 - document.body.scrollTop)); }, 200);
         document.getElementsByClassName('ContentArea')[0].classList.add('displayMainContent');
       }

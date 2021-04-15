@@ -19,6 +19,7 @@ class Work extends React.Component {
                 description={contentArray[i].description}
                 mockupImageText={contentArray[i].altMockupText}
                 role={contentArray[i].role}
+                key={i}
             >
             </WorkBlock>)
         }

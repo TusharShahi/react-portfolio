@@ -20,6 +20,7 @@ class Experience extends React.Component {
                 skillsUsed={contentArray[i].skillsUsed}
                 link={contentArray[i].companyLink}
                 role={contentArray[i].role}
+                key={i}
             >
             </ExperienceBlock>)
         }
