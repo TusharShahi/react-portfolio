@@ -28,10 +28,10 @@ export const codeScribbles = [
 
 export const workFlixRemote = {
     'project': 'flixRemote',
-    'description': "Remote for your Netflix Stream",
-    'mockup': "/images/work/workforce-mockup.png",
+    'description': "Chrome extension which lets you control Netflix using phone",
+    'mockup': "/images/work/flixremote-mockup.png",
     'link': "https://chrome.google.com/webstore/detail/flixremote-your-netflix-r/jkhffbfbokiincaebolhpcfdkhiipalh?hl=en",
-    'altMockupText': "Chrome Extension Mockup"
+    'altMockupText': "FlixRemote Mockup"
 }
 
 
@@ -53,7 +53,7 @@ export const workMRMWebsite = {
 
 export const workEmergencyZone = {
     'project': 'Emergency Zone',
-    'description': "Online biology based quiz game",
+    'description': "Online biology based quiz game for college tech fest",
     'mockup': "/images/work/emergencyzone-mockup.png",
     'link': "",
     'altMockupText': "Emergency Zone Mockup"
