@@ -1,7 +1,7 @@
 import React from 'react';
 import SkillsBox from './SkillsBox';
 
-class ExperienceBlock extends React.Component {
+class ExperienceBlock extends React.PureComponent {
 
     constructor(props) {
         super(props);

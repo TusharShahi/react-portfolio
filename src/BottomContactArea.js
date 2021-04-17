@@ -1,7 +1,7 @@
 import React from 'react';
 import ContactArea from './ContactArea';
 
-class BottomContactArea extends React.Component {
+class BottomContactArea extends React.PureComponent {
 
   constructor(props) {
     super(props);

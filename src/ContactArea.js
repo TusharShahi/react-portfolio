@@ -5,7 +5,7 @@ import SocialMediaLink from './SocialMediaLink';
 import { phoneNumber, emailLink, socialMediaLinks } from './constants';
 
 
-class ContactArea extends React.Component {
+class ContactArea extends React.PureComponent {
 
   constructor(props) {
     super(props);

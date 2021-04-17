@@ -3,7 +3,7 @@ import './Sidebar.css';
 import ContactArea from './ContactArea';
 
 
-class SideBar extends React.Component {
+class SideBar extends React.PureComponent {
 
   constructor(props) {
     super(props);
@@ -13,9 +13,13 @@ class SideBar extends React.Component {
   render() {
     //import displayPictureLink from this.props.displayPictureLink;
     //const displayPictureLink = require(this.props.displayPictureLink);
+    let roleAttribute = null;
+    if (this.props.aside) {
+      roleAttribute = { 'role': 'complementary' };
+    }
     let displayPictureLink = this.props.displayPictureLink;
     return (
-      <div className="SideBar" id="mainPageSideBar">
+      <div className="SideBar" id="mainPageSideBar" {...roleAttribute}>
         <div className='SideBarBox'>
 
           <div id='welcomeArea'>

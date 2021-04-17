@@ -1,19 +1,19 @@
 import React from 'react';
 
-class WorkScreenShotsBox extends React.Component {
+class WorkScreenShotsBox extends React.PureComponent {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {};
     }
 
-    render(){
+    render() {
 
-           return(<div className='WorkScreenShotsBox'>                    
+        return (<div className='WorkScreenShotsBox'>
 
-            </div>);
-        }
-        
+        </div>);
+    }
+
 }
 
 

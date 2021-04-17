@@ -3,7 +3,7 @@ import ExperienceBlock from './ExperienceBlock';
 import { experienceShell, experienceMRM, experienceRMO, experienceRMO2, experienceTCFG } from './constants';
 import './Experience.css'
 
-class Experience extends React.Component {
+class Experience extends React.PureComponent {
 
     constructor(props) {
         super(props);
@@ -12,18 +12,18 @@ class Experience extends React.Component {
 
     createExperienceBlock(contentArray) {
 
-        let experienceBlock = [];
-        for (let i = 0; i < contentArray.length; i++) {
-            experienceBlock.push(<ExperienceBlock name={contentArray[i].company}
-                description={contentArray[i].description}
-                duration={contentArray[i].timePeriod}
-                skillsUsed={contentArray[i].skillsUsed}
-                link={contentArray[i].companyLink}
-                role={contentArray[i].role}
-                key={i}
-            >
-            </ExperienceBlock>)
-        }
+        let experienceBlock = contentArray.map(x =>
+            <ExperienceBlock name={x.company}
+                description={x.description}
+                duration={x.timePeriod}
+                skillsUsed={x.skillsUsed}
+                link={x.companyLink}
+                role={x.role}
+                key={x.timePeriod}
+            ></ExperienceBlock>
+
+        );
+
         return experienceBlock;
     }
 

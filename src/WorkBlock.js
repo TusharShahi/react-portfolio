@@ -2,7 +2,7 @@ import React from 'react';
 import WorkScreenShotsBox from './WorkScreenShotsBox';
 import cx from 'classnames';
 
-class WorkBlock extends React.Component {
+class WorkBlock extends React.PureComponent {
 
     constructor(props) {
         super(props);
@@ -10,7 +10,7 @@ class WorkBlock extends React.Component {
     }
 
     render() {
-
+        //console.log("work block rendered");
         let hasLink = true;
         let h3Tag = <h3><a href={this.props.link}
             className={cx({

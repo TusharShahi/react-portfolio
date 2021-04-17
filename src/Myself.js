@@ -8,7 +8,7 @@ import { myDescription, myFreeTime, myBrag, myHobbies } from './constants';
 
 
 
-class Myself extends React.Component {
+class Myself extends React.PureComponent {
 
     constructor(props) {
         super(props);

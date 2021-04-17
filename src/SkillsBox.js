@@ -3,7 +3,7 @@ import { abilities, abilitesNameMapping } from './constants';
 import './SkillsBox.css';
 
 
-class SkillsBox extends React.Component {
+class SkillsBox extends React.PureComponent {
 
     constructor(props) {
         super(props);
@@ -15,15 +15,9 @@ class SkillsBox extends React.Component {
     createAbilitiesBox(groupName) {
 
 
-        let skillsIcon = [];
+        let skillsIcon = abilities[groupName].map((x) =>
+            <li key={x.name}><a rel="noopener noreferrer" target="_blank" href={x.link} title={x.name}><img src={process.env.PUBLIC_URL + '/images/icons/' + x.imageLink + '-icon.svg'} alt={x.name}></img></a></li>);
 
-        for (let i = 0; i < abilities[groupName].length; i++) {
-
-            let imageLink = '/images/icons/' + abilities[groupName][i].imageLink + '-icon.svg';
-            skillsIcon.push(
-                <li key={i}><a href={abilities[groupName][i].link} title={abilities[groupName][i].name}><img src={process.env.PUBLIC_URL + imageLink} alt={abilities[groupName][i].name}></img></a></li>
-            );
-        }
 
         let listCode = <ul>{skillsIcon}</ul>;
         let skillsListBox = <div><p>{abilitesNameMapping[groupName]} :</p>{listCode}</div>
@@ -34,16 +28,9 @@ class SkillsBox extends React.Component {
 
         if (skillsList != null) {
 
-            let skillsIcon = [];
-            for (let i = 0; i < skillsList.length; i++) {
+            let skillsIcon = skillsList.map((x) =>
+                <li key={x.name}><a rel="noopener noreferrer" target="_blank" href={x.link} title={x.name}><img src={process.env.PUBLIC_URL + '/images/icons/' + x.imageLink + '-icon.svg'} alt={x.name}></img></a></li>);
 
-                let imageLink = '/images/icons/' + skillsList[i].imageLink + '-icon.svg';
-                skillsIcon.push(
-
-                    <li key={i}><a rel="noopener noreferrer" target="_blank" href={skillsList[i].link} title={skillsList[i].name}><img src={process.env.PUBLIC_URL + imageLink} alt={skillsList[i].name}></img></a></li>
-
-                );
-            }
 
             let listCode = <ul>{skillsIcon}</ul>
             let skillsListBox = <div><p>Skills Used : </p>{listCode}</div>

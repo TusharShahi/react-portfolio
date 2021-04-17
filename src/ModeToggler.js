@@ -1,7 +1,7 @@
 import React from 'react';
 import Context from './Context';
 
-class ModeToggler extends React.Component {
+class ModeToggler extends React.PureComponent {
 
 
 
@@ -15,7 +15,7 @@ class ModeToggler extends React.Component {
 
     keyDown(e) {
         if (e.keyCode == '13' || e.keyCode == '32') {
-            console.log("called");
+            //console.log("called");
             this.buttonRef.current.click();
         }
     }

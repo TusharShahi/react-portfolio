@@ -4,7 +4,7 @@ import ModeToggler from './ModeToggler';
 import './Header.css';
 
 
-class Header extends React.Component {
+class Header extends React.PureComponent {
 
 
   constructor(props) {

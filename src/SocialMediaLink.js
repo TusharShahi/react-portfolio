@@ -2,7 +2,7 @@ import React from 'react';
 import { socialMediaIconLink } from './constants';
 import Context from './Context';
 
-class SocialMediaLink extends React.Component {
+class SocialMediaLink extends React.PureComponent {
 
   static contextType = Context;
   constructor(props) {

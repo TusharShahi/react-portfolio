@@ -3,7 +3,7 @@ import { workWorkForce, workEmergencyZone, workMRMWebsite, workFlixRemote } from
 import WorkBlock from './WorkBlock';
 import './Work.css';
 
-class Work extends React.Component {
+class Work extends React.PureComponent {
 
     constructor(props) {
         super(props);
@@ -12,17 +12,16 @@ class Work extends React.Component {
 
     createWorkBlock(contentArray) {
 
-        let workBlock = [];
-        for (let i = 0; i < contentArray.length; i++) {
-            workBlock.push(<WorkBlock name={contentArray[i].project}
-                mockupImage={contentArray[i].mockup} link={contentArray[i].link}
-                description={contentArray[i].description}
-                mockupImageText={contentArray[i].altMockupText}
-                role={contentArray[i].role}
-                key={i}
+        let workBlock = contentArray.map((x) =>
+            <WorkBlock name={x.project}
+                mockupImage={x.mockup} link={x.link}
+                description={x.description}
+                mockupImageText={x.altMockupText}
+                role={x.role}
+                key={x.project}
             >
-            </WorkBlock>)
-        }
+            </WorkBlock>
+        );
         return workBlock;
 
 
@@ -34,7 +33,6 @@ class Work extends React.Component {
     }
 
     render() {
-
 
         return (<div>
             <h2>Work</h2>

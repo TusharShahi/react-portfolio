@@ -2,7 +2,7 @@ import React from 'react';
 import SkillsBox from './SkillsBox';
 
 
-class AbilitiesBox extends React.Component {
+class AbilitiesBox extends React.PureComponent {
 
     constructor(props) {
         super(props);

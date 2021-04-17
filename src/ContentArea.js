@@ -5,7 +5,7 @@ import Experience from './Experience';
 import './ContentArea.css';
 
 
-class ContentArea extends React.Component {
+class ContentArea extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = { content: this.props.content };
@@ -13,6 +13,7 @@ class ContentArea extends React.Component {
     }
 
     render() {
+        //console.log("content area rendered");
         let contentAreaCode;
         let contentType = this.props.content;
         if (contentType == 'experience') {

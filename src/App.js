@@ -15,10 +15,12 @@ import SideBar from './SideBar';
 import ContentArea from './ContentArea';
 import BottomContactArea from './BottomContactArea';
 
-class App extends React.Component {
+class App extends React.PureComponent {
 
 
   constructor(props) {
+    //console.log("constructor starting");
+
     super(props);
 
     this.changeContent = this.changeContent.bind(this);
@@ -27,12 +29,15 @@ class App extends React.Component {
     this.changeAccordingtToResize = this.changeAccordingtToResize.bind(this);
 
     let preferredTheme = 'DARK';
+
     if (localStorage.getItem('themeSwitch') !== null && localStorage.getItem('themeSwitch') === 'LIGHT') {
       preferredTheme = 'LIGHT';
       //  this.changeColorsTo(preferredtheme);
     }
+    //console.log("local storage found " + preferredTheme);
 
     this.changeColorsTo(preferredTheme);
+    //console.log("runnnin this");
 
     this.toggleTheme = () => {
       if (document.body.classList.contains('preLoad')) {
@@ -53,6 +58,7 @@ class App extends React.Component {
       }
 
     }
+    //console.log("runnnin this 2");
 
     //TODO 
     //window.addEventListener('resize',this.changeAccordingtToResize);
@@ -64,13 +70,14 @@ class App extends React.Component {
       toggleTheme: this.toggleTheme
     };
 
-
+    //console.log("ran constructore");
   }
   componentDidMount() {
     this.changeAccordingtToResize();
   }
 
   changeAccordingtToResize() {
+    //console.log("check this");
     //window.alert("boo");
     if (window.innerWidth <= 768) {
       document.getElementsByClassName('SideBarBox')[0].getElementsByClassName('contactArea')[0].style.display = 'none';
@@ -79,13 +86,13 @@ class App extends React.Component {
     else {
       document.getElementsByClassName('bottomContactArea')[0].style.display = 'none';
     }
-
+    //console.log("that");
 
   }
 
 
   changeColorsTo(theme) {
-    //console.log("change colors to " + theme);
+    ////console.log("change colors to " + theme);
 
     document.documentElement.style.setProperty('--background', colorPalette[theme.toLowerCase()].background);
     document.documentElement.style.setProperty('--paraText', colorPalette[theme.toLowerCase()].text);
@@ -107,7 +114,7 @@ class App extends React.Component {
   }
 
   changeContent(newContent) {
-    //console.log(newContent);
+    ////console.log(newContent);
     if (!this.state.sideBarCompressed) {
       if (window.innerWidth > 768) {
 
@@ -117,7 +124,7 @@ class App extends React.Component {
 
       }
       else {
-        //console.log(window.scrollTop);
+        ////console.log(window.scrollTop);
         setTimeout(() => { window.scrollBy(0, (500 - document.body.scrollTop)); }, 200);
         document.getElementsByClassName('ContentArea')[0].classList.add('displayMainContent');
       }
@@ -148,12 +155,13 @@ class App extends React.Component {
 
 
   render() {
+    //console.log("App rendered");
     return (
       <Context.Provider value={{ theme: this.state.theme, toggleTheme: this.toggleTheme }}>
         <div className="App" >
 
           <Header navChangeFunction={this.changeContent} changeDisplayPicture={this.changeDisplayPicture} contentType={this.state.contentAreaView}></Header>
-          <SideBar displayPictureLink={this.state.displayPictureLink}></SideBar>
+          <SideBar displayPictureLink={this.state.displayPictureLink} aside={this.state.contentAreaView !== 'main'}></SideBar>
           <ContentArea content={this.state.contentAreaView}></ContentArea>
           <BottomContactArea></BottomContactArea>
 
