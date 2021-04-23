@@ -1,5 +1,4 @@
 import React from 'react';
-import WorkScreenShotsBox from './WorkScreenShotsBox';
 import cx from 'classnames';
 
 class WorkBlock extends React.PureComponent {

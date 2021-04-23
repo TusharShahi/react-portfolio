@@ -4,26 +4,54 @@
 }
 
 .SkillsBox ul{
-    display: flex;
-    align-items: flex-start;
-    padding: 2% 0% 0% 0%
 }
 .SkillsBox li{
-    width: 5%;
-    margin: 0% 5% 0% 0%;
+    display: inline-block;
+    margin: 0% 2% 0% 0%;
 }
 .SkillsBox p{
     padding-top: 20px;
 }
 
 .SkillsBox a {
+    font-size: 16px;
     width: 100%;
-}
-.SkillsBox li:hover{
-    transform: scale(1.2);
+    margin: 0 5px 0 0;
+    min-width: 30px;
+    text-align: center;
+    font-weight: 400;
+    transition: color 0.5s ease-in 0.5s, border-color 0.5s ease-in 0.5s;
 
 }
-.SkillsBox a:hover{
+.SkillsBox a.red{
+
+    color : #F64740;
+    border-color : #F64740;
+}
+.SkillsBox a.green{
+    color :#BDBF09;
+    border-color : #BDBF09;
+}
+.SkillsBox a.blue{
+    color :#2978A0;
+    border-color : #2978A0;
+}
+.SkillsBox a.yellow{
+    color : #FCF300;
+    border-color :#FCF300;
+}
+
+.SkillsBox a.LIGHT{
+
+    color :var(--base);
+    border-color: var(--base);
+
+
+}
+
+.SkillsBox li > a:hover{
+border-bottom: 3px solid;
+text-decoration: none;
 }
 .SkillsBox img{
     width: 100%;

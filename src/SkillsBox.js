@@ -1,13 +1,15 @@
 import React from 'react';
+import Context from './Context';
 import { abilities, abilitesNameMapping } from './constants';
 import './SkillsBox.css';
 
 
 class SkillsBox extends React.PureComponent {
-
+    static contextType = Context;
     constructor(props) {
         super(props);
         this.state = {};
+
         //this.createSkillsBox = this.createSkillsBox.bind(this);
 
     }
@@ -16,7 +18,7 @@ class SkillsBox extends React.PureComponent {
 
 
         let skillsIcon = abilities[groupName].map((x) =>
-            <li key={x.name}><a rel="noopener noreferrer" target="_blank" href={x.link} title={x.name}><img src={process.env.PUBLIC_URL + '/images/icons/' + x.imageLink + '-icon.svg'} alt={x.name}></img></a></li>);
+            <li key={x.name}><a className={x.color + ' ' + this.context.theme} rel="noopener noreferrer" target="_blank" href={x.link}>{x.name}</a></li>);
 
 
         let listCode = <ul>{skillsIcon}</ul>;
@@ -29,7 +31,7 @@ class SkillsBox extends React.PureComponent {
         if (skillsList != null) {
 
             let skillsIcon = skillsList.map((x) =>
-                <li key={x.name}><a rel="noopener noreferrer" target="_blank" href={x.link} title={x.name}><img src={process.env.PUBLIC_URL + '/images/icons/' + x.imageLink + '-icon.svg'} alt={x.name}></img></a></li>);
+                <li key={x.name}><a className={x.color + ' ' + this.context.theme} rel="noopener noreferrer" target="_blank" href={x.link}>{x.name}</a></li>);
 
 
             let listCode = <ul>{skillsIcon}</ul>

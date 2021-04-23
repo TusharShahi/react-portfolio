@@ -5,6 +5,9 @@ export const socialMediaIconLink = '/images/icons/socialMediaIcon-instagram.svg'
 
 export const phoneNumber = '+91-8860129729';
 export const emailLink = "shahi.tushar8@gmail.com";
+export const mainHeading = `Hey! My Name is Tushar.
+I like to code.`;
+
 
 export const socialMediaLinks = {
     'linkedin': 'https://www.linkedin.com/in/tushar-shahi/',
@@ -24,6 +27,110 @@ export const codeScribbles = [
     "A whatsapp bot that replied with a students attendance from my colleges online attendance portal. Yes, Whatsapp blocked all of the numbers I used.",
     "A python script that emails me my attendance every morning before class at 7 AM, with the subject being either RUN or DO NOT WAKEUP, depending on my attendance for the first class.",
 ]
+
+
+export const skills = {
+
+    'javascript': {
+        'name': 'Javascript',
+        'imageLink': 'javaScript',
+        'link': 'https://www.javascript.com/',
+        'color': 'yellow'
+    },
+    'node': {
+        'name': 'NodeJs',
+        'imageLink': 'nodejs',
+        'link': 'https://nodejs.org/en/',
+        'color': 'green'
+    },
+    'typescript': {
+        'name': 'TypeScript',
+        'imageLink': 'typeScript',
+        'link': 'https://www.typescriptlang.org/',
+        'color': 'blue'
+    },
+    'react': {
+        'name': 'ReactJS',
+        'imageLink': 'react',
+        'link': 'https://reactjs.org/',
+        'color': 'blue'
+    },
+    'salesforce': {
+        'name': 'Salesforce',
+        'imageLink': 'salesforce',
+        'link': 'https://developer.salesforce.com/',
+        'color': 'blue'
+
+    },
+    'html': {
+        'name': 'HTML',
+        'imageLink': 'html5',
+        'link': 'https://html.com/',
+        'color': 'red'
+
+    },
+    'css': {
+        'name': 'CSS',
+        'imageLink': 'css3',
+        'link': 'https://www.w3.org/Style/CSS/Overview.en.html',
+        'color': 'blue'
+
+    },
+    'mongo':
+    {
+        'name': 'Mongo',
+        'imageLink': 'mongo',
+        'link': 'https://www.mongodb.com/',
+        'color': 'green'
+
+    }, 'es':
+    {
+        'name': 'ElasticSearch',
+        'imageLink': 'elasticSearch',
+        'link': 'https://www.elastic.co/',
+        'color': 'blue'
+
+    },
+    'cpp':
+    {
+        'name': 'C++',
+        'imageLink': 'cplusplus',
+        'link': 'https://www.cplusplus.com/',
+        'color': 'red'
+
+
+    },
+    'python': {
+        'name': 'Python',
+        'imageLink': 'python3',
+        'link': 'https://www.python.org/',
+        'color': 'blue'
+
+    },
+    'git': {
+        'name': 'Git',
+        'imageLink': 'git',
+        'link': 'https://git-scm.com/',
+        'color': 'red'
+
+    },
+    'vsc': {
+        'name': 'VSCode',
+        'imageLink': 'vsCode',
+        'link': 'https://code.visualstudio.com/',
+        'color': 'blue'
+
+    },
+    'linux': {
+        'name': 'Linux',
+        'imageLink': 'linux',
+        'link': 'https://www.linux.org/',
+        'color': 'yellow'
+
+    }
+
+};
+
 
 
 export const workFlixRemote = {
@@ -68,16 +175,8 @@ export const experienceShell = {
     'company': 'Shell IT',
     'description': 'As a salesforce developer, pivotal in golive and updates of MyJiffyLube app. Responsible for front end development focusing on accessibility.',
     'timePeriod': 'July 2019 - ',
-    'skillsUsed': [{ 'name': 'Salesforce', 'imageLink': 'salesforce', 'link': 'https://developer.salesforce.com/' },
-    {
-        'name': 'Javascript',
-        'imageLink': 'javaScript',
-        'link': 'https://www.javascript.com/'
-    }, {
-        'name': 'CSS',
-        'imageLink': 'css3',
-        'link': 'https://www.w3.org/Style/CSS/Overview.en.html'
-    }
+    'skillsUsed': [skills['salesforce'],
+    skills['javascript'], skills['css']
     ]
 }
 
@@ -88,10 +187,10 @@ export const experienceRMO = {
     'description': 'Built online review analysis tool. Enhanced existing product dashboard with more insightful data analysis features. Created influencer discovery platform from scratch. Mentored interns to successfully onboard them to the project.',
     'timePeriod': 'December 2018 - June 2019',
     'skillsUsed': [/*{ 'name' : 'Stanford Core NLP' , 'imageLink' : 'stanfordCoreNLP'},*/
-        { 'name': 'ElasticSearch', 'imageLink': 'elasticSearch', 'link': 'https://www.elastic.co/' },
-        { 'name': 'Mongo', 'imageLink': 'mongo', 'link': 'https://www.mongodb.com/' },
-        { 'name': 'TypeScript', 'imageLink': 'typeScript', 'link': 'https://www.typescriptlang.org/' },
-        { 'name': 'Python 3', 'imageLink': 'python3', 'link': 'https://www.typescriptlang.org/' }]
+        skills['es'],
+        skills['mongo'],
+        skills['typescript'],
+        skills['python']]
 }
 
 export const experienceRMO2 = {
@@ -100,8 +199,8 @@ export const experienceRMO2 = {
     'company': 'Rank Me Online',
     'description': 'Built the new product dashboard of the B2B Online Reputation Management tool. The dashboard provided efficient searching, filtering and aggregations of social media data.',
     'timePeriod': 'June 2018 - July 2018',
-    'skillsUsed': [{ 'name': 'ElasticSearch', 'imageLink': 'elasticSearch', 'link': 'https://www.elastic.co/' },
-    { 'name': 'TypeScript', 'imageLink': 'typeScript', 'link': 'https://www.typescriptlang.org/' }]
+    'skillsUsed': [skills['es'],
+    skills['typescript']]
 }
 
 export const experienceMRM = {
@@ -119,84 +218,32 @@ export const experienceTCFG = {
     'timePeriod': 'November 2016 - December 2018',
 }
 
+
 export const abilities = {
     'web': [
-        /*{
-            'name': 'Javascript',
-            'imageLink': 'javaScript',
-            'link': 'https://www.javascript.com/'
-        },*/
-        {
-            'name': 'NodeJs',
-            'imageLink': 'nodejs',
-            'link': 'https://nodejs.org/en/'
-        },
-        {
-            'name': 'TypeScript',
-            'imageLink': 'typeScript',
-            'link': 'https://www.typescriptlang.org/'
-        },
-        {
-            'name': 'ReactJS',
-            'imageLink': 'react',
-            'link': 'https://reactjs.org/'
-        }/*,
-        {
-            'name': 'Salesforce',
-            'imageLink': 'salesforce',
-            'link': 'https://developer.salesforce.com/'
-        }*/,
-        {
-            'name': 'HTML',
-            'imageLink': 'html5',
-            'link': 'https://html.com/'
-        },
-        {
-            'name': 'CSS',
-            'imageLink': 'css3',
-            'link': 'https://www.w3.org/Style/CSS/Overview.en.html'
-        }
+        skills['node'],
+        skills['typescript'],
+        skills['react'],
+        skills['salesforce'],
+        skills['html'],
+        skills['css']
     ],
     'database': [
-        {
-            'name': 'Mongo',
-            'imageLink': 'mongo',
-            'link': 'https://www.mongodb.com/'
-        },
-        {
-            'name': 'ElasticSearch',
-            'imageLink': 'elasticSearch',
-            'link': 'https://www.elastic.co/'
-        },
+        skills['mongo'],
+        skills['es']
     ],
     'core': [
-        {
-            'name': 'C++',
-            'imageLink': 'cplusplus',
-            'link': 'https://www.cplusplus.com/'
-
-        }
+        skills['cpp']
     ],
-    'tools': [{
-        'name': 'Git',
-        'imageLink': 'git',
-        'link': 'https://git-scm.com/'
-    },
-    {
-        'name': 'VS Code',
-        'imageLink': 'vsCode',
-        'link': 'https://code.visualstudio.com/'
-    },
-    {
-        'name': 'Linux',
-        'imageLink': 'linux',
-        'link': 'https://www.linux.org/'
-    }],
-    'design': [],
-
-
+    'tools': [
+        skills['git'],
+        skills['vsc'],
+        skills['linux']
+    ]
 
 }
+
+
 
 export const abilitesNameMapping = {
     'web': 'Web Technologies',

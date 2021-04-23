@@ -1,6 +1,7 @@
 import React from 'react';
 import './Sidebar.css';
 import ContactArea from './ContactArea';
+import { mainHeading } from './constants';
 
 
 class SideBar extends React.PureComponent {
@@ -18,6 +19,8 @@ class SideBar extends React.PureComponent {
       roleAttribute = { 'role': 'complementary' };
     }
     let displayPictureLink = this.props.displayPictureLink;
+    let x = `Hey! My Name is Tushar.
+    I like to code.`;
     return (
       <div className="SideBar" id="mainPageSideBar" {...roleAttribute}>
         <div className='SideBarBox'>
@@ -28,8 +31,7 @@ class SideBar extends React.PureComponent {
             </div>
 
             <div id='textArea'>
-              <h1>Hey! My name is  <span id='nameSpan'>Tushar Shahi</span>.</h1>
-              <h1>I code for a living.</h1>
+              <h1>{x}</h1>
             </div>
           </div>
           <ContactArea></ContactArea>
