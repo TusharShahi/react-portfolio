@@ -221,10 +221,10 @@ export const experienceTCFG = {
 
 export const abilities = {
     'web': [
-        skills['node'],
+        skills['javascript'],
         skills['typescript'],
+        skills['node'],
         skills['react'],
-        skills['salesforce'],
         skills['html'],
         skills['css']
     ],
