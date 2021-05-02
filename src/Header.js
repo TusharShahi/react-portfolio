@@ -10,7 +10,7 @@ const Header = memo((props) => {
   return (
     <div className="Header">
       <ModeToggler></ModeToggler>
-      <Navbar navChangeFunction={props.navChangeFunction} changeDisplayPicture={props.changeDisplayPicture} contentType={props.contentType}></Navbar>
+      <Navbar navChangeFunction={props.navChangeFunction} contentType={props.contentType}></Navbar>
     </div >
   );
 

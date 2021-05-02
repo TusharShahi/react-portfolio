@@ -1,11 +1,11 @@
-import React from 'react';
-import Work, { memo } from './Work';
+import React, { memo, forwardRef } from 'react';
+import Work from './Work';
 import Myself from './Myself';
 import Experience from './Experience';
 import './ContentArea.css';
 
 
-const ContentArea = memo((props) => {
+const ContentArea = memo(forwardRef((props, incomingRef) => {
 
     let contentAreaCode;
     let contentType = props.content;
@@ -20,12 +20,12 @@ const ContentArea = memo((props) => {
     }
 
     return (
-        <div className="ContentArea">
+        <div className="ContentArea" ref={incomingRef}>
             {contentAreaCode}
         </div>
     );
 
-});
+}));
 
 
 export default ContentArea;

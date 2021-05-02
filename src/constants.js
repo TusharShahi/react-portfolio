@@ -256,7 +256,7 @@ export const abilitesNameMapping = {
 export const colorPalette = {
     dark: {
         background: '#222629',
-        paraText: '#6b6e70',
+        paraText: '#fff',
         //  headers: '#86c232',
         headers: '#fff',
 

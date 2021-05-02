@@ -1,9 +1,9 @@
-import React, { memo, useLayoutEffect, useState } from 'react';
+import React, { memo, forwardRef, useLayoutEffect, useState } from 'react';
 import './Sidebar.css';
 import ContactArea from './ContactArea';
 
 
-const SideBar = memo((props) => {
+const SideBar = memo(forwardRef((props, incomingRef) => {
 
   console.log("side bar function called");
 
@@ -33,7 +33,7 @@ const SideBar = memo((props) => {
   I like to code.`;
 
   return (
-    <div className="SideBar" id="mainPageSideBar" {...roleAttribute}>
+    <div className="SideBar" ref={incomingRef} {...roleAttribute}>
       <div className='SideBarBox'>
 
         <div id='welcomeArea'>
@@ -53,6 +53,6 @@ const SideBar = memo((props) => {
 
     </div>
   );
-});
+}));
 
 export default SideBar;
