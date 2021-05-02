@@ -1,39 +1,31 @@
 import React from 'react';
-import Work from './Work';
+import Work, { memo } from './Work';
 import Myself from './Myself';
 import Experience from './Experience';
 import './ContentArea.css';
 
 
-class ContentArea extends React.PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = { content: this.props.content };
+const ContentArea = memo((props) => {
 
+    let contentAreaCode;
+    let contentType = props.content;
+    if (contentType == 'experience') {
+        contentAreaCode = <Experience></Experience>
+    }
+    else if (contentType == 'work') {
+        contentAreaCode = <Work></Work>
+    }
+    else if (contentType == 'else') {
+        contentAreaCode = <Myself></Myself>
     }
 
-    render() {
-        //console.log("content area rendered");
-        let contentAreaCode;
-        let contentType = this.props.content;
-        if (contentType == 'experience') {
-            contentAreaCode = <Experience></Experience>
-        }
-        else if (contentType == 'work') {
-            contentAreaCode = <Work></Work>
-        }
-        else if (contentType == 'else') {
-            contentAreaCode = <Myself></Myself>
-        }
+    return (
+        <div className="ContentArea">
+            {contentAreaCode}
+        </div>
+    );
 
-        return (
-            <div className="ContentArea">
-                {contentAreaCode}
-            </div>
-        );
-    }
-
-}
+});
 
 
 export default ContentArea;

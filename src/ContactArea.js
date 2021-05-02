@@ -4,39 +4,34 @@ import SocialMediaLink from './SocialMediaLink';
 
 import { phoneNumber, emailLink, socialMediaLinks } from './constants';
 
+const ContactArea = memo((props) => {
 
-class ContactArea extends React.PureComponent {
-
-  constructor(props) {
-    super(props);
-
-  }
-
-  render() {
-    let telNumberLink = 'tel:' + phoneNumber;
-    let mailToLink = "mailto:" + emailLink;
-    return (
-
-      <div className='contactArea'>
+  const telNumberLink = 'tel:' + phoneNumber;
+  const mailToLink = "mailto:" + emailLink;
 
 
-        <div id='socialMediaBox'>
-          <SocialMediaLink website='linkedin' link={socialMediaLinks['linkedin']}></SocialMediaLink>
-          <SocialMediaLink website='instagram' link={socialMediaLinks['instagram']}></SocialMediaLink>
-          <SocialMediaLink website='github' link={socialMediaLinks['github']}></SocialMediaLink>
+  return (
 
-        </div>
+    <div className='contactArea'>
 
-        <div id='emailAndPhoneBox'>
-          <p><a href={mailToLink}>{emailLink}</a></p>
-          <p><a href={telNumberLink}>{phoneNumber}</a></p>
-        </div>
 
-        <div id='copyrightBox'>
-          <p>	&copy; Tushar Shahi</p>
-        </div>
+      <div id='socialMediaBox'>
+        <SocialMediaLink website='linkedin' link={socialMediaLinks['linkedin']}></SocialMediaLink>
+        <SocialMediaLink website='instagram' link={socialMediaLinks['instagram']}></SocialMediaLink>
+        <SocialMediaLink website='github' link={socialMediaLinks['github']}></SocialMediaLink>
+
       </div>
-    );
-  }
-}
+
+      <div id='emailAndPhoneBox'>
+        <p><a href={mailToLink}>{emailLink}</a></p>
+        <p><a href={telNumberLink}>{phoneNumber}</a></p>
+      </div>
+
+      <div id='copyrightBox'>
+        <p>	&copy; Tushar Shahi</p>
+      </div>
+    </div>
+  );
+});
+
 export default ContactArea;

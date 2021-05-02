@@ -1,16 +1,13 @@
-import React from 'react';
+import React, { memo } from 'react';
 import ExperienceBlock from './ExperienceBlock';
 import { experienceShell, experienceMRM, experienceRMO, experienceRMO2, experienceTCFG } from './constants';
 import './Experience.css'
 
-class Experience extends React.PureComponent {
+const Experience = memo(() => {
 
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
 
-    createExperienceBlock(contentArray) {
+
+    const createExperienceBlock = (contentArray) => {
 
         let experienceBlock = contentArray.map(x =>
             <ExperienceBlock name={x.company}
@@ -28,24 +25,24 @@ class Experience extends React.PureComponent {
     }
 
 
-    render() {
-        return (<div>
-            <h2>Experience</h2>
-            <div id='corporate'>
-                {this.createExperienceBlock([experienceShell, experienceRMO, experienceRMO2])}
-            </div>
-            <div id='school'>
-                <h2>College</h2>
-                <div>
 
-                </div>
-                <div>
-                    {this.createExperienceBlock([experienceMRM, experienceTCFG])}
-                </div>
-            </div>
-        </div>);
-    }
+    return (<div>
+        <h2>Experience</h2>
+        <div id='corporate'>
+            {createExperienceBlock([experienceShell, experienceRMO, experienceRMO2])}
+        </div>
+        <div id='school'>
+            <h2>College</h2>
+            <div>
 
-}
+            </div>
+            <div>
+                {createExperienceBlock([experienceMRM, experienceTCFG])}
+            </div>
+        </div>
+    </div>);
+
+
+});
 
 export default Experience;

@@ -70,14 +70,17 @@ text-decoration: none;
 @media only screen and (max-width: 768px){
     .SkillsBox ul{
 
-        padding: 5% 0%;
+        padding: 3% 0%;
 
     }
     .SkillsBox li{
-        width: 40px;
-        margin: 0% 2%;
+
+        margin: 0%;
     }
 
+    .SkillsBox a{
+        font-size: 12px;
+    }
      }
     
 

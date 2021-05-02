@@ -13,7 +13,7 @@ import './App.css';
 import Header from './Header';
 import SideBar from './SideBar';
 import ContentArea from './ContentArea';
-import BottomContactArea from './BottomContactArea';
+import ContactArea from './ContactArea';
 
 class App extends React.PureComponent {
 
@@ -26,7 +26,7 @@ class App extends React.PureComponent {
     this.changeContent = this.changeContent.bind(this);
     this.changeDisplayPicture = this.changeDisplayPicture.bind(this);
     this.createNewDisplayPictureLink = this.createNewDisplayPictureLink.bind(this);
-    this.changeAccordingtToResize = this.changeAccordingtToResize.bind(this);
+    this.changeAccordingToInitialWidth = this.changeAccordingToInitialWidth.bind(this);
 
     let preferredTheme = 'DARK';
 
@@ -58,33 +58,34 @@ class App extends React.PureComponent {
       }
 
     }
-    //console.log("runnnin this 2");
+
 
     //TODO 
-    //window.addEventListener('resize',this.changeAccordingtToResize);
+    //window.addEventListener('resize',this.changeAccordingToInitialWidth);
     this.state = {
       sideBarCompressed: false,
       contentAreaView: 'main',
       displayPictureLink: isMobile ? displayPictureLinkPhone : displayPictureLink,
       theme: preferredTheme,
-      toggleTheme: this.toggleTheme
+      toggleTheme: this.toggleTheme,
+      showBottomContactArea: false
     };
 
     //console.log("ran constructore");
   }
   componentDidMount() {
-    this.changeAccordingtToResize();
+    this.changeAccordingToInitialWidth();
   }
 
-  changeAccordingtToResize() {
-    //console.log("check this");
+  changeAccordingToInitialWidth() {
+    console.log("change according to initial width");
     //window.alert("boo");
     if (window.innerWidth <= 768) {
-      document.getElementsByClassName('SideBarBox')[0].getElementsByClassName('contactArea')[0].style.display = 'none';
-      document.getElementsByClassName('bottomContactArea')[0].style.display = 'block';
+
+      this.setState({ showBottomContactArea: true });
     }
     else {
-      document.getElementsByClassName('bottomContactArea')[0].style.display = 'none';
+      this.setState({ showBottomContactArea: false });
     }
     //console.log("that");
 
@@ -95,7 +96,7 @@ class App extends React.PureComponent {
     ////console.log("change colors to " + theme);
 
     document.documentElement.style.setProperty('--background', colorPalette[theme.toLowerCase()].background);
-    document.documentElement.style.setProperty('--paraText', colorPalette[theme.toLowerCase()].text);
+    document.documentElement.style.setProperty('--paraText', colorPalette[theme.toLowerCase()].paraText);
     document.documentElement.style.setProperty('--headerText', colorPalette[theme.toLowerCase()].headers);
     document.documentElement.style.setProperty('--base', colorPalette[theme.toLowerCase()].base);
     document.documentElement.style.setProperty('--pressed', colorPalette[theme.toLowerCase()].pressed);
@@ -155,7 +156,7 @@ class App extends React.PureComponent {
 
 
   render() {
-    //console.log("App rendered");
+    console.log("App rendered");
     return (
       <Context.Provider value={{ theme: this.state.theme, toggleTheme: this.toggleTheme }}>
         <div className="App" >
@@ -163,7 +164,7 @@ class App extends React.PureComponent {
           <Header navChangeFunction={this.changeContent} changeDisplayPicture={this.changeDisplayPicture} contentType={this.state.contentAreaView}></Header>
           <SideBar displayPictureLink={this.state.displayPictureLink} aside={this.state.contentAreaView !== 'main'}></SideBar>
           <ContentArea content={this.state.contentAreaView}></ContentArea>
-          <BottomContactArea></BottomContactArea>
+          {this.state.showBottomContactArea && <ContactArea></ContactArea>}
 
         </div >
       </Context.Provider>

@@ -1,34 +1,20 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Navbar from './Navbar';
 import ModeToggler from './ModeToggler';
 import './Header.css';
 
 
-class Header extends React.PureComponent {
+const Header = memo((props) => {
 
 
-  constructor(props) {
-    super(props);
-
-  }
-
-  componentDidUpdate(prevProps) {
-  }
-
+  return (
+    <div className="Header">
+      <ModeToggler></ModeToggler>
+      <Navbar navChangeFunction={props.navChangeFunction} changeDisplayPicture={props.changeDisplayPicture} contentType={props.contentType}></Navbar>
+    </div >
+  );
 
 
-
-
-  render() {
-
-    return (
-      <div className="Header">
-        <ModeToggler></ModeToggler>
-        <Navbar navChangeFunction={this.props.navChangeFunction} changeDisplayPicture={this.props.changeDisplayPicture} contentType={this.props.contentType}></Navbar>
-      </div >
-    );
-  }
-
-}
+});
 
 export default Header;

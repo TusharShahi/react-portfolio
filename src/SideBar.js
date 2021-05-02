@@ -1,47 +1,58 @@
-import React from 'react';
+import React, { memo, useLayoutEffect, useState } from 'react';
 import './Sidebar.css';
 import ContactArea from './ContactArea';
-import { mainHeading } from './constants';
 
 
-class SideBar extends React.PureComponent {
+const SideBar = memo((props) => {
 
-  constructor(props) {
-    super(props);
+  console.log("side bar function called");
 
-  }
+  const [showContactArea, toggleContactArea] = useState(true);
 
-  render() {
-    //import displayPictureLink from this.props.displayPictureLink;
-    //const displayPictureLink = require(this.props.displayPictureLink);
-    let roleAttribute = null;
-    if (this.props.aside) {
-      roleAttribute = { 'role': 'complementary' };
+  useLayoutEffect(() => {
+    const checkScreenSize = () => {
+      console.log(window.innerWidth);
+      toggleContactArea(window.innerWidth > 768);
     }
-    let displayPictureLink = this.props.displayPictureLink;
-    let x = `Hey! My Name is Tushar.
-    I like to code.`;
-    return (
-      <div className="SideBar" id="mainPageSideBar" {...roleAttribute}>
-        <div className='SideBarBox'>
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
 
-          <div id='welcomeArea'>
-            <div id='displayPhotoArea'>
-              <img src={process.env.PUBLIC_URL + displayPictureLink} alt='Display Picture'></img>
-            </div>
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    }
+  });
 
-            <div id='textArea'>
-              <h1>{x}</h1>
-            </div>
+
+
+  let roleAttribute = null;
+  if (props.aside) {
+    roleAttribute = { 'role': 'complementary' };
+  }
+  let displayPictureLink = props.displayPictureLink;
+  let mainHeading = `Hey! I am Tushar.
+  I like to code.`;
+
+  return (
+    <div className="SideBar" id="mainPageSideBar" {...roleAttribute}>
+      <div className='SideBarBox'>
+
+        <div id='welcomeArea'>
+          <div id='displayPhotoArea'>
+            <img src={process.env.PUBLIC_URL + displayPictureLink} alt='Display Picture'></img>
           </div>
-          <ContactArea></ContactArea>
 
-
-
+          <div id='textArea'>
+            <h1>{mainHeading}</h1>
+          </div>
         </div>
+        {showContactArea && <ContactArea></ContactArea>}
+
+
 
       </div>
-    );
-  }
-}
+
+    </div>
+  );
+});
+
 export default SideBar;
