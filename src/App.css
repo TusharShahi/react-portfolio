@@ -14,11 +14,86 @@
 }
 
 
+.ContentArea{
+    
+  display: block;
+  opacity: 0;    
+  width: 75%;
+  margin: 5% 0 0 25%;
 
-@media only screen and (min-width: 320px) and (max-width: 479px){  }
+  text-align: left;
+  padding: 2%;
+  /* TODO : remove maybe*/
+  font-size: 200%;
+}
 
-@media only screen and (min-width: 480px) and (max-width: 768px){ }
+.ContentArea > div{
+  padding: 3% 5%;
+  font-family: 'Rubik';
+  color : var(--paraText);    
+}
 
-@media only screen and (min-width: 769px) and (max-width: 991px){ }
+.ContentArea h2 {
+  margin: 3% 0;
+  text-transform: uppercase;
+  color: var(--headerText);
+  border-bottom: 0.1em dashed var(--headerText);
 
-@media only screen and (min-width: 992px){  }
+}
+
+.ContentArea p {
+  font-size: 60%;
+}
+
+.showMainContent{
+
+  opacity: 1;    
+  transition: opacity 0.5s ease-in 0.25s;
+  -webkit-transition: opacity 0.5s ease-in 0.25s;
+  -moz-transition: opacity 0.5s ease-in 0.25s;
+    -o-transition: opacity 0.5s ease-in 0.25s;
+}
+
+
+@media only screen and (min-width: 992px){
+
+}
+
+@media only screen and (max-width: 991px){ 
+
+  
+}
+
+
+@media only screen and (max-width: 768px){
+  .ContentArea{
+      display: none;
+      width: 90%;
+      margin: 5% auto;
+    /*  text-align: center; */
+      opacity: 1;
+      font-size: 200%;
+  }
+
+  .displayMainContent{
+      display: block;
+  }    
+
+  .ContentArea h1 {
+      margin-bottom: 10%;
+  
+  }
+
+
+}
+  
+
+
+@media only screen and (max-width: 479px){ 
+
+.ContentArea p {
+  font-size: 50%;
+}
+
+
+}

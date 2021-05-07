@@ -3,7 +3,7 @@ export const displayPictureLinkPhone = '/images/displayPicture-experience-phone.
 
 export const socialMediaIconLink = '/images/icons/socialMediaIcon-instagram.svg';
 
-export const phoneNumber = '+91-8860129729';
+//export const phoneNumber = '+91-8860129729';
 export const emailLink = "shahi.tushar8@gmail.com";
 export const mainHeading = `Hey! My Name is Tushar.
 I like to code.`;
@@ -258,7 +258,7 @@ export const colorPalette = {
         background: '#222629',
         paraText: '#fff',
         //  headers: '#86c232',
-        headers: '#fff',
+        headerText: '#fff',
 
         base: '#fff',
         pressed: '#c5c6c8',
@@ -268,7 +268,7 @@ export const colorPalette = {
         background: '#fffff',
         paraText: '#15202b',
         // headers: '#4c632d',
-        headers: '#212121',
+        headerText: '#212121',
 
         base: '#212121',
         pressed: '#22303c',

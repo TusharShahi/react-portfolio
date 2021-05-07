@@ -3,7 +3,7 @@ import './Sidebar.css';
 import ContactArea from './ContactArea';
 
 
-const SideBar = memo(forwardRef((props, incomingRef) => {
+const SideBar = memo(forwardRef((props, incomingRefs) => {
 
   console.log("side bar function called");
 
@@ -33,8 +33,8 @@ const SideBar = memo(forwardRef((props, incomingRef) => {
   I like to code.`;
 
   return (
-    <div className="SideBar" ref={incomingRef} {...roleAttribute}>
-      <div className='SideBarBox'>
+    <div className="SideBar" ref={incomingRefs.sideBarRef} {...roleAttribute}>
+      <div className='SideBarBox' ref={incomingRefs.sideBarBoxRef}>
 
         <div id='welcomeArea'>
           <div id='displayPhotoArea'>

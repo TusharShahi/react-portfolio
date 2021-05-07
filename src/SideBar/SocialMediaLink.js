@@ -1,6 +1,6 @@
 import React, { useContext, memo } from 'react';
-import { socialMediaIconLink } from './constants';
-import Context from './Context';
+import { socialMediaIconLink } from '../constants';
+import Context from '../Context';
 
 const SocialMediaLink = memo((props) => {
 

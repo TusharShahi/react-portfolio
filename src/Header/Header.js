@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import Navbar from './Navbar';
-import ModeToggler from './ModeToggler';
+import ModeToggler from '../ModeToggler';
 import './Header.css';
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillsBox from './SkillsBox';
+import SkillsBox from '../Utils/SkillsBox';
 
 
 const AbilitiesBox = () => {

@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
-import { workWorkForce, workEmergencyZone, workMRMWebsite, workFlixRemote } from './constants';
-import WorkBlock from './WorkBlock';
-import './Work.css';
+import { workWorkForce, workEmergencyZone, workMRMWebsite, workFlixRemote } from '../constants';
+import WorkBlock from '../Work/WorkBlock';
+import '../Work/Work.css';
 
 const Work = memo(() => {
 

@@ -1,15 +1,12 @@
 .SideBar{
 
     width: 30%;
-    /*background: yellow;*/
     left: 35%;
     padding: 20px;
     font-family: 'Rubik';
     position: fixed;
     bottom: 5%;
     text-align: center;
-    /*display: none;*/ 
-    /*TODO : top: 70px; */
     font-size: 200%;
 }
 
@@ -22,7 +19,7 @@
 
 .sideBarBoxFullWidth{
     left: 110%;
-    transition: all 0.5s ease-in;
+    transition: left 0.5s ease-in;
 
 }
 
@@ -31,7 +28,7 @@
 }
 
 .sideBarCompressed{
-    transition: all 0.5s ease-in;
+    transition: left 0.5s ease-in;
     left: -30%;
 
 }

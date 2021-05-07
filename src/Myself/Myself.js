@@ -1,10 +1,7 @@
 import React, { memo } from 'react';
 import AbilitiesBox from './AbilitiesBox';
-
 import './Myself.css';
-
-
-import { myDescription, myFreeTime, myBrag, myHobbies } from './constants';
+import { myDescription, myFreeTime, myBrag, myHobbies } from '../constants';
 
 
 

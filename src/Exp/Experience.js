@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import ExperienceBlock from './ExperienceBlock';
-import { experienceShell, experienceMRM, experienceRMO, experienceRMO2, experienceTCFG } from './constants';
+import { experienceShell, experienceMRM, experienceRMO, experienceRMO2, experienceTCFG } from '../constants';
 import './Experience.css'
 
 const Experience = memo(() => {

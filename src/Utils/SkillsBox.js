@@ -1,6 +1,6 @@
 import React, { useContext, memo } from 'react';
-import Context from './Context';
-import { abilities, abilitesNameMapping } from './constants';
+import Context from '../Context';
+import { abilities, abilitesNameMapping } from '../constants';
 import './SkillsBox.css';
 
 

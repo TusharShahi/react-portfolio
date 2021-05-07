@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import SkillsBox from './SkillsBox';
+import SkillsBox from '../Utils/SkillsBox';
 
 const ExperienceBlock = memo((props) => {
     let skillsUsed = props.skillsUsed;

@@ -1,12 +1,11 @@
 import React, { memo } from 'react';
 import './ContactArea.css';
 import SocialMediaLink from './SocialMediaLink';
-
-import { phoneNumber, emailLink, socialMediaLinks } from './constants';
+import { /*phoneNumber ,*/ emailLink, socialMediaLinks } from '../constants';
 
 const ContactArea = memo((props) => {
 
-  const telNumberLink = 'tel:' + phoneNumber;
+  //const telNumberLink = 'tel:' + phoneNumber;
   const mailToLink = "mailto:" + emailLink;
 
 
@@ -24,7 +23,7 @@ const ContactArea = memo((props) => {
 
       <div id='emailAndPhoneBox'>
         <p><a href={mailToLink}>{emailLink}</a></p>
-        <p><a href={telNumberLink}>{phoneNumber}</a></p>
+        {/*<p><a href={telNumberLink}>{phoneNumber}</a></p>*/}
       </div>
 
       <div id='copyrightBox'>

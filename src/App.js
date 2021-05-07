@@ -5,30 +5,29 @@ import 'typeface-bebas-neue';
 import 'typeface-rubik';
 
 import { displayPictureLinkPhone, colorPalette } from './constants';
-import { isMobile } from 'react-device-detect';
 import Context from './Context';
 
 
 import './App.css';
-import Header from './Header';
-import SideBar from './SideBar';
-import ContentArea from './ContentArea';
-import ContactArea from './ContactArea';
+import Header from './Header/Header';
+import SideBar from './SideBar/SideBar';
+import Work from './Work/Work';
+import ContactArea from './SideBar/ContactArea';
+import Experience from './Exp/Experience';
+import Myself from './Myself/Myself';
 
 const App = memo(() => {
 
-  console.log("run");
+
 
 
   const changeColorsTo = (theme) => {
     console.log("change colors to");
-    document.documentElement.style.setProperty('--background', colorPalette[theme.toLowerCase()].background);
-    document.documentElement.style.setProperty('--paraText', colorPalette[theme.toLowerCase()].paraText);
-    document.documentElement.style.setProperty('--headerText', colorPalette[theme.toLowerCase()].headers);
-    document.documentElement.style.setProperty('--base', colorPalette[theme.toLowerCase()].base);
-    document.documentElement.style.setProperty('--pressed', colorPalette[theme.toLowerCase()].pressed);
-    document.documentElement.style.setProperty('--shade', colorPalette[theme.toLowerCase()].shade);
+    const properties = ['background', 'paraText', 'headerText', 'base', 'pressed', 'shade'];
+    properties.forEach((x) => {
+      document.documentElement.style.setProperty(`--${x}`, colorPalette[theme.toLowerCase()][x]);
 
+    });
 
   }
 
@@ -40,6 +39,8 @@ const App = memo(() => {
 
   const contentAreaDivRef = createRef();
   const sideBarRef = createRef();
+  const sideBarBoxRef = createRef();
+  const sideBarRefs = { sideBarRef, sideBarBoxRef };
 
   changeColorsTo(preferredTheme);
 
@@ -79,7 +80,7 @@ const App = memo(() => {
       if (window.innerWidth > 768) {
         contentAreaDivRef.current.classList.add('showMainContent');
         sideBarRef.current.classList.add('sideBarCompressed');
-        sideBarRef.current.getElementsByClassName('SideBarBox')[0].classList.add('sideBarBoxFullWidth');
+        sideBarBoxRef.current.classList.add('sideBarBoxFullWidth');
 
       }
       else {
@@ -92,14 +93,25 @@ const App = memo(() => {
     changeContentAreaView(newContent);
   }
 
+  const renderContentView = (view) => {
+    switch (view) {
+      case 'experience': return <Experience></Experience>;
+      case 'work': return <Work></Work>;
+      case 'else': return <Myself></Myself>;
+      default: return null;
+    }
+  }
+
   console.log("App rendered");
   return (
     <Context.Provider value={{ theme: currentTheme, toggleTheme: toggleThemeFunction }}>
       <div className="App" >
 
         <Header navChangeFunction={changeContent} contentType={contentAreaView}></Header>
-        <SideBar ref={sideBarRef} displayPictureLink={displayPictureLinkPhone} aside={contentAreaView !== 'main'}></SideBar>
-        <ContentArea ref={contentAreaDivRef} content={contentAreaView}></ContentArea>
+        <SideBar ref={sideBarRefs} displayPictureLink={displayPictureLinkPhone} aside={contentAreaView !== 'main'}></SideBar>
+        <div className="ContentArea" ref={contentAreaDivRef}>
+          {renderContentView(contentAreaView)}
+        </div>
         {showBottomContactArea && <ContactArea></ContactArea>}
 
       </div >
