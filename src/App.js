@@ -1,8 +1,5 @@
 import React, { memo, createRef, useState } from 'react';
 
-import "typeface-raleway";
-import 'typeface-bebas-neue';
-import 'typeface-rubik';
 
 import { displayPictureLinkPhone, colorPalette } from './constants';
 import Context from './Context';
