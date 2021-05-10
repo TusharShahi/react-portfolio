@@ -9,14 +9,7 @@ const SideBar = memo(forwardRef((props, incomingRefs) => {
 
   const [showContactArea, toggleContactArea] = useState(true);
 
-  let displayPicture = null;
 
-  useEffect(() => {
-    displayPicture = new Image();
-    displayPicture.src = process.env.PUBLIC_URL + displayPictureLink;
-
-
-  }, []);
 
   useLayoutEffect(() => {
     const checkScreenSize = () => {
