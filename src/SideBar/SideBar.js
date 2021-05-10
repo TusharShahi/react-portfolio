@@ -5,13 +5,13 @@ import ContactArea from './ContactArea';
 
 const SideBar = memo(forwardRef((props, incomingRefs) => {
 
-  console.log("side bar function called");
+  // console.log("side bar function called");
 
   const [showContactArea, toggleContactArea] = useState(true);
 
   useLayoutEffect(() => {
     const checkScreenSize = () => {
-      console.log(window.innerWidth);
+      //console.log(window.innerWidth);
       toggleContactArea(window.innerWidth > 768);
     }
     checkScreenSize();

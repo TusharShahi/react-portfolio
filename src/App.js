@@ -19,7 +19,7 @@ const App = memo(() => {
 
 
   const changeColorsTo = (theme) => {
-    console.log("change colors to");
+    // console.log("change colors to");
     const properties = ['background', 'paraText', 'headerText', 'base', 'pressed', 'shade'];
     properties.forEach((x) => {
       document.documentElement.style.setProperty(`--${x}`, colorPalette[theme.toLowerCase()][x]);
@@ -72,7 +72,7 @@ const App = memo(() => {
 
 
   const changeContent = (newContent) => {
-    console.log(newContent);
+    //console.log(newContent);
     if (!sideBarCompressed) {
       if (window.innerWidth > 768) {
         contentAreaDivRef.current.classList.add('showMainContent');
@@ -99,7 +99,7 @@ const App = memo(() => {
     }
   }
 
-  console.log("App rendered");
+  //console.log("App rendered");
   return (
     <Context.Provider value={{ theme: currentTheme, toggleTheme: toggleThemeFunction }}>
       <div className="App" >
