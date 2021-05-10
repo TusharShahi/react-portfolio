@@ -47,7 +47,7 @@ const SideBar = memo(forwardRef((props, incomingRefs) => {
 
         <div id='welcomeArea'>
           <div id='displayPhotoArea'>
-            <img src={process.env.PUBLIC_URL + displayPictureLink} alt='Display Picture'></img>
+            <img height="588" width="604" src={process.env.PUBLIC_URL + displayPictureLink} alt='Display Picture'></img>
           </div>
 
           <div id='textArea'>
