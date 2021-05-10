@@ -18,7 +18,7 @@ const SocialMediaLink = memo((props) => {
   //if(socialMediaType == 'instagram'){
 
   //  imageLinkTagCode = <a href={socialMediaLink}><img src={require(`${componentSocialMediaIconLink}`)} alt={altText}></img></a>
-  imageLinkTagCode = <a href={socialMediaLink} rel="noopener noreferrer" target="_blank"><img src={process.env.PUBLIC_URL + componentSocialMediaIconLink} alt={altText}></img></a>
+  imageLinkTagCode = <a href={socialMediaLink} rel="noopener noreferrer" target="_blank"><img width="21" height="21" src={process.env.PUBLIC_URL + componentSocialMediaIconLink} alt={altText}></img></a>
   let mainClassName = "SocialMediaLink " + theme;
   return (
     <div className={mainClassName}>
