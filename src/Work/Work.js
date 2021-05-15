@@ -15,6 +15,8 @@ const Work = memo(() => {
                 mockupImageText={x.altMockupText}
                 role={x.role}
                 key={x.project}
+                imgWidth={x.imgWidth}
+                imgHeight={x.imgHeight}
             >
             </WorkBlock>
         );

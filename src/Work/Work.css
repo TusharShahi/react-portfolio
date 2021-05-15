@@ -34,6 +34,7 @@
 
 .WorkBlock img{
 width: 40%;
+height: auto;
 }
 
 .WorkDescription{
@@ -46,6 +47,7 @@ width: 40%;
     .WorkBlock img{
         width: 70%;
      /*   text-align: center; */
+     height: auto;
         }
         
     .WorkBlock{

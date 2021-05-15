@@ -17,7 +17,7 @@ const ModeToggler = memo((props) => {
 
     return (
         <div className="modeChangeButton" ref={buttonRef} role="button" tabIndex="0" onClick={toggleTheme} onKeyDown={keyDown}>
-            {theme.toUpperCase()}
+            {theme.toUpperCase()} <span role="img" style={{ display: 'inline', position: 'relative' }} aria-hidden="true">&#128161;</span>
         </div>
     );
 });

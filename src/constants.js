@@ -138,7 +138,10 @@ export const workFlixRemote = {
     'description': "Chrome extension which lets you control Netflix using phone",
     'mockup': "/images/work/flixremote-mockup.png",
     'link': "https://chrome.google.com/webstore/detail/flixremote-your-netflix-r/jkhffbfbokiincaebolhpcfdkhiipalh?hl=en",
-    'altMockupText': "FlixRemote Mockup"
+    'altMockupText': "FlixRemote Mockup",
+    'imgWidth': '672',
+    'imgHeight': '384'
+
 }
 
 
@@ -147,7 +150,9 @@ export const workWorkForce = {
     'description': "Desktop application to manage work force at a college campus",
     'mockup': "/images/work/workforce-mockup.png",
     'link': "",
-    'altMockupText': "WorkForce Mockup"
+    'altMockupText': "WorkForce Mockup",
+    'imgWidth': '5005',
+    'imgHeight': '3004'
 }
 
 export const workMRMWebsite = {
@@ -155,7 +160,9 @@ export const workMRMWebsite = {
     'description': "Official Website for Mars Rover Manipal",
     'mockup': "/images/work/mrmwebsite-mockup.png",
     'link': "http://www.marsrovermanipal.com",
-    'altMockupText': "MRM Website Mockup"
+    'altMockupText': "MRM Website Mockup",
+    'imgWidth': '5340',
+    'imgHeight': '2826'
 }
 
 export const workEmergencyZone = {
@@ -163,7 +170,9 @@ export const workEmergencyZone = {
     'description': "Online biology based quiz game for college tech fest",
     'mockup': "/images/work/emergencyzone-mockup.png",
     'link': "",
-    'altMockupText': "Emergency Zone Mockup"
+    'altMockupText': "Emergency Zone Mockup",
+    'imgWidth': '5416',
+    'imgHeight': '2796'
 }
 
 
@@ -173,7 +182,7 @@ export const experienceShell = {
     'companyLink': 'https://play.google.com/store/apps/details?id=com.shell.sitibv.myjiffylube&hl=en&gl=US',
     'role': 'Software Engineer',
     'company': 'Shell IT',
-    'description': 'As a salesforce developer, pivotal in golive and updates of MyJiffyLube app. Responsible for front end development focusing on accessibility.',
+    'description': 'Pivotal in golive and updates of MyJiffyLube app. Responsible for front end development focusing on accessibility.',
     'timePeriod': 'July 2019 - ',
     'skillsUsed': [skills['salesforce'],
     skills['javascript'], skills['css']
