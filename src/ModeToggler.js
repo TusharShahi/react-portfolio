@@ -15,9 +15,13 @@ const ModeToggler = memo((props) => {
         }
     }
 
+
+    let emojiSpan = theme.toUpperCase() === 'DARK'
+        ? <span role="img" aria-hidden="true">&#127771;</span>
+        : <span role="img" aria-hidden="true">&#127774;</span>;
     return (
         <div className="modeChangeButton" ref={buttonRef} role="button" tabIndex="0" onClick={toggleTheme} onKeyDown={keyDown}>
-            {theme.toUpperCase()} <span role="img" style={{ display: 'inline', position: 'relative' }} aria-hidden="true">&#128161;</span>
+            {theme.toUpperCase()} {emojiSpan}
         </div>
     );
 });
