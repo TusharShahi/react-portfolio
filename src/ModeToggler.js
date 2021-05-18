@@ -2,9 +2,6 @@ import React, { useRef, useContext, memo } from 'react';
 import { Context } from './Context';
 
 
-const rerenderCheck = () => {
-    return true;
-}
 const ModeToggler = memo(() => {
 
     const { theme, toggleTheme } = useContext(Context);
@@ -28,7 +25,7 @@ const ModeToggler = memo(() => {
             {theme.toUpperCase()} {emojiSpan}
         </div>
     );
-}, rerenderCheck);
+});
 
 ModeToggler.type.displayName = 'MODE TOGGLER';
 export default ModeToggler;
