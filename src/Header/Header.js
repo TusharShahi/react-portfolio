@@ -17,4 +17,5 @@ const Header = memo((props) => {
 
 });
 
+Header.type.displayName = 'HEADER';
 export default Header;

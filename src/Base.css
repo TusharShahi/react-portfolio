@@ -1,21 +1,4 @@
 
-/* Mode Change Animations */
-body{
-}
-
-
-div{
-}
-
-/* Remove Transitions on pageLoad */
-.preLoad{
-  transition: none !important;
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-}
-
 
 /** Normalization **/
 

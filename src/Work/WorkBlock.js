@@ -32,5 +32,6 @@ const WorkBlock = memo((props) => {
     </div>);
 });
 
+WorkBlock.type.displayName = 'WORK BLOCK';
 
 export default WorkBlock;

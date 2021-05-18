@@ -32,4 +32,6 @@ const Navlink = memo((props) => {
   );
 });
 
+Navlink.type.displayName = 'NAVLINK';
+
 export default Navlink;

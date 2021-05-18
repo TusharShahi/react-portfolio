@@ -56,5 +56,5 @@ const SideBar = memo(forwardRef((props, incomingRefs) => {
     </div>
   );
 }));
-
+SideBar.type.displayName = 'SIDEBAR';
 export default SideBar;

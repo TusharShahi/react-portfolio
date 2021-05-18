@@ -32,5 +32,5 @@ const ContactArea = memo((props) => {
     </div>
   );
 });
-
+ContactArea.type.displayName = 'CONTACTAREA';
 export default ContactArea;

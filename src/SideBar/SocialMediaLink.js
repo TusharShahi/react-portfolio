@@ -1,6 +1,6 @@
 import React, { useContext, memo } from 'react';
 import { socialMediaIconLink } from '../constants';
-import Context from '../Context';
+import { Context } from '../Context';
 
 const SocialMediaLink = memo((props) => {
 
@@ -31,5 +31,5 @@ const SocialMediaLink = memo((props) => {
 
 });
 
-
+SocialMediaLink.type.displayName = 'SOCIALMEDIALINK';
 export default SocialMediaLink;

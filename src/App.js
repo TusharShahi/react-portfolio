@@ -1,9 +1,7 @@
 import React, { memo, createRef, useState } from 'react';
 
 
-import { displayPictureLinkPhone, colorPalette } from './constants';
-import Context from './Context';
-
+import { displayPictureLinkPhone } from './constants';
 
 import './App.css';
 import Header from './Header/Header';
@@ -13,53 +11,29 @@ import ContactArea from './SideBar/ContactArea';
 import Experience from './Exp/Experience';
 import Myself from './Myself/Myself';
 
+
 const App = memo(() => {
 
 
 
 
-  const changeColorsTo = (theme) => {
-    // console.log("change colors to");
-    const properties = ['background', 'paraText', 'headerText', 'base', 'pressed', 'shade'];
-    properties.forEach((x) => {
-      document.documentElement.style.setProperty(`--${x}`, colorPalette[theme.toLowerCase()][x]);
 
-    });
 
-  }
-
-  let preferredTheme = 'DARK';
-
-  if (localStorage.getItem('themeSwitch') !== null && localStorage.getItem('themeSwitch') === 'LIGHT') {
-    preferredTheme = 'LIGHT';
-  }
 
   const contentAreaDivRef = createRef();
   const sideBarRef = createRef();
   const sideBarBoxRef = createRef();
   const sideBarRefs = { sideBarRef, sideBarBoxRef };
 
-  changeColorsTo(preferredTheme);
 
 
-  const toggleThemeFunction = () => {
 
-
-    if (document.body.classList.contains('preLoad')) {
-      document.body.classList.remove('preLoad');
-    }
-    const newTheme = currentTheme === 'DARK' ? 'LIGHT' : 'DARK';
-    changeTheme(newTheme);
-    localStorage.setItem('themeSwitch', newTheme);
-    changeColorsTo(newTheme);
-  }
 
 
   const [sideBarCompressed, changeSideBarCompressed] = useState(false);
 
   const [contentAreaView, changeContentAreaView] = useState('main');
 
-  const [currentTheme, changeTheme] = useState(preferredTheme);
 
   const [showBottomContactArea, changeBottomContactAreaVisibility] = useState(window.innerWidth < 768);
 
@@ -101,20 +75,19 @@ const App = memo(() => {
 
   //console.log("App rendered");
   return (
-    <Context.Provider value={{ theme: currentTheme, toggleTheme: toggleThemeFunction }}>
-      <div className="App" >
+    <div className="App" >
 
-        <Header navChangeFunction={changeContent} contentType={contentAreaView}></Header>
-        <SideBar ref={sideBarRefs} displayPictureLink={displayPictureLinkPhone} aside={contentAreaView !== 'main'}></SideBar>
-        <div className="ContentArea" ref={contentAreaDivRef}>
-          {renderContentView(contentAreaView)}
-        </div>
-        {showBottomContactArea && <ContactArea></ContactArea>}
+      <Header navChangeFunction={changeContent} contentType={contentAreaView}></Header>
+      <SideBar ref={sideBarRefs} displayPictureLink={displayPictureLinkPhone} aside={contentAreaView !== 'main'}></SideBar>
+      <div className="ContentArea" ref={contentAreaDivRef}>
+        {renderContentView(contentAreaView)}
+      </div>
+      {showBottomContactArea && <ContactArea></ContactArea>}
 
-      </div >
-    </Context.Provider>
+    </div >
   );
 
 
 });
+App.type.displayName = 'APP';
 export default App;

@@ -31,5 +31,5 @@ const Myself = memo(() => {
 
 });
 
-
+Myself.type.displayName = 'MYSELF';
 export default Myself;

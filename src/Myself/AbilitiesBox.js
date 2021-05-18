@@ -16,5 +16,5 @@ const AbilitiesBox = () => {
 
 }
 
-
+AbilitiesBox.displayName = 'ABILITIES BOX';
 export default AbilitiesBox;

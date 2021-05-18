@@ -44,5 +44,5 @@ const Experience = memo(() => {
 
 
 });
-
+Experience.type.displayName = 'EXPERIENCE';
 export default Experience;

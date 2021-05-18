@@ -46,5 +46,5 @@ const ExperienceBlock = memo((props) => {
 
 });
 
-
+ExperienceBlock.type.displayName = 'EXPERIENCEBLOCK';
 export default ExperienceBlock;

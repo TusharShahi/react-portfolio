@@ -15,4 +15,5 @@ const Navbar = memo((props) => {
 
 });
 
+Navbar.type.displayName = 'NAVBAR';
 export default Navbar;

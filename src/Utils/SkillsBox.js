@@ -1,5 +1,5 @@
 import React, { useContext, memo } from 'react';
-import Context from '../Context';
+import { Context } from '../Context';
 import { abilities, abilitesNameMapping } from '../constants';
 import './SkillsBox.css';
 
@@ -40,5 +40,5 @@ const SkillsBox = memo((props) => {
     return mainBox;
 
 });
-
+SkillsBox.type.displayName = 'SKILLS BOX';
 export default SkillsBox;

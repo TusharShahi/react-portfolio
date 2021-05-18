@@ -35,5 +35,5 @@ const Work = memo(() => {
 
 });
 
-
+Work.type.displayName = 'WORK';
 export default Work;
