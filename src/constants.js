@@ -206,7 +206,7 @@ export const experienceRMO2 = {
     'companyLink': 'https://www.rankme.online/',
     'role': 'Software Engineering Intern',
     'company': 'Rank Me Online',
-    'description': 'Built the new product dashboard of the B2B Online Reputation Management tool. The dashboard provided efficient searching, filtering and aggregations of social media data.',
+    'description': 'Built the new product dashboard of the B2B Online Reputation Management tool. The dashboard provided efficient searching, filtering, and aggregations of social media data.',
     'timePeriod': 'June 2018 - July 2018',
     'skillsUsed': [skills['es'],
     skills['typescript']]
